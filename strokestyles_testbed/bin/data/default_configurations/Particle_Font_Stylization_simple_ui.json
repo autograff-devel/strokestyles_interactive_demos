@@ -1,0 +1,57 @@
+[
+	{"draw stroke polygon" : "draw stroke polygon"},
+	{"draw original": "Draw Original"},
+	{"General":
+	[
+		{"Text.text": "Input Text"},
+		{"Text.spacing": "Letter Spacing"},
+        {"Camera.pos x" : "X"},
+        {"Camera.pos y" : "Y"},
+		{"Camera.zoom": "Zoom"},
+		{"Stroke.thickness" : "thickness"},
+		{"Schematization":
+			[
+				{"Schematization.C": "Angle quantization"},
+				{"Schematization.start angle": "Initial angle"},
+				{"Schematization.rectify struct": "Adjust incidence"},
+				{"Schematization.adjust struct": "Adjust structural relations"},
+				{"simplify eps" : "(Pre)Simplification"}
+			]
+		},
+		{"_Structural Modifiers":
+			[
+				{"Structural modifiers.free end extension": "Stroke end extension"},
+				{"Structural modifiers.extension x": "Horizontal extension"},
+				{"Structural modifiers.extension y": "Vertical extension"}
+			]
+		}, 
+		{"_Settings":
+			[
+				{"debug draw": "Debug draw"},
+				{"simplify eps": "Stroke simplification"},
+				{"straighten thresh": "Stroke straightening"}
+			]
+		}
+	]},
+	{"Background":[
+		{"Background.background color" : "background color"}
+	]},
+	{"Particle System":[
+		{"Particle Font Stylization.num_particles" : "num_particles"},
+		{"_Particle Font Stylization.also opposite" : "also opposite"},
+		{"Particle Font Stylization.kp" : "kp"},
+		{"_Particle Font Stylization.damping_ratio" : "damping_ratio"},
+		{"Particle Font Stylization.num_iterations" : "num_iterations"},
+		{"_Particle Font Stylization.steps_per_second" : "steps_per_second"},
+		{"_Particle Font Stylization.spawn_interval" : "spawn_interval"},
+		{"Particle Font Stylization.rotational_force" : "rotational_force"},
+		{"Particle Font Stylization.random_radial_force" : "random_radial_force"},
+		{"Particle Font Stylization.rand_start" : "rand_start"},
+		{"_Particle Font Stylization.rot_speed" : "rot_speed"},
+		{"Particle Font Stylization.fade" : "fade"},
+		{"Particle Font Stylization.psize" : "psize"},
+		{"Particle Font Stylization.p color" : "p color"},
+		{"_Particle Font Stylization.centripetal_alpha" : "centripetal_alpha"},
+		{"Particle Font Stylization.speed" : "attractor speed"}
+	]}
+]

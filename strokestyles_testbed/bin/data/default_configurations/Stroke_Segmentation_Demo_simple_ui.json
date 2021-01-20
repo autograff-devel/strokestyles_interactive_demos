@@ -1,0 +1,26 @@
+[
+    {"Text Layout":
+    [
+        {"Text.text": "Input Text"},
+        {"Text.spacing": "Letter Spacing"},
+		{"Camera.pos x" : "pos x"},
+		{"Camera.pos y" : "pos y"},
+		{"Camera.zoom": "Zoom"},
+		{"draw original": "Draw Original"},
+		{"original offset" : "Original Offset"}
+	]},
+	{"Strokes":
+		[
+			{"Stroke Segmentation Demo.thickness": "Thickness"},
+			{"Stylization.global smoothness": "Smoothing"},
+			{"Advanced":
+			[
+				{"Stylization.miter limit": "Miter limit"},
+				{"Stylization.unfold": "Remove folds"},
+				{"Stylization.Advanced.max displacement": "Max displacement"},
+				{"Stylization.opt x0":"Optimise initial state"}
+			]}
+		]
+	}
+
+]

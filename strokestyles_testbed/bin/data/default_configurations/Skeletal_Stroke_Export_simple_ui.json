@@ -1,0 +1,21 @@
+[
+    {"Text Layout":
+    [
+        {"Text.text": "Input Text"},
+        {"Text.spacing": "Letter Spacing"},
+        {"Camera.pos x" : "X"},
+        {"Camera.pos y" : "Y"},
+        {"Camera.zoom": "Zoom"},
+        {"draw original": "Draw Original"}
+	]},
+	{"Strokes":
+		[
+			{"Bezier fitting.bezier width multiplier": "Thickness scale"},
+			{"straighten thresh": "Straighten Threshold"},
+			{"Bezier fitting.bezier fir err": "Bezier fit error"},
+			{"Bezier fitting.bezier subd": "Bezier render subdivision"},
+			{"Bezier fitting.bezier pre sampling": "Bezier pre-sampling"}
+		]
+	}
+
+]

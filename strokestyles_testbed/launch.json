@@ -1,0 +1,16 @@
+{
+  "configurations": [
+    {
+        "MIMode": "lldb",
+        "name": "cpptools",
+        "type": "cppdbg",
+        "request": "launch",
+        "cwd": "${workspaceFolder}/bin",
+        "program": "${workspaceFolder}/bin/strokestyles_testbed",
+        "args": [],
+        "stopAtEntry": false,
+      "externalConsole": false,
+      "logging": { "engineLogging": true, "trace": true, "traceResponse": true }
+      }
+    ]
+  }

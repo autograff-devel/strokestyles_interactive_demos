@@ -1,0 +1,113 @@
+<Params name="Params">
+    <Params>
+        <var type="FLOAT" name="random seed">10</var>
+        <var type="BOOL" name="draw stroke polygon">0</var>
+        <var type="BOOL" name="draw original">0</var>
+        <var type="FLOAT" name="original offset">1</var>
+        <var type="BOOL" name="shift original">0</var>
+        <var type="BOOL" name="transparent save">1</var>
+        <var type="BOOL" name="update every frame">1</var>
+        <var type="FLOAT" name="outline thickness">2</var>
+        <var type="BOOL" name="g_use_ref_width_adjustment">1</var>
+        <var type="BOOL" name="pre_rectify_load">1</var>
+        <var type="BOOL" name="pre_rectify_schematize">1</var>
+        <var type="FLOAT" name="anim time">1</var>
+        <var type="FLOAT" name="simplify eps">1.868</var>
+        <var type="FLOAT" name="straighten thresh">0.1</var>
+        <var type="BOOL" name="gui active">0</var>
+    </Params>
+    <Children>
+        <Params name="Camera">
+            <Params>
+                <var type="FLOAT" name="pos x">190.404</var>
+                <var type="FLOAT" name="pos y">-175.845</var>
+                <var type="FLOAT" name="zoom">0.655</var>
+                <var type="FLOAT" name="rotation">0</var>
+            </Params>
+            <Children/>
+        </Params>
+        <Params name="Text">
+            <Params>
+                <var type="STRING" name="text">PARTY</var>
+                <var type="FLOAT" name="spacing">1</var>
+                <var type="STRING" name="font name">Graphite Std</var>
+            </Params>
+            <Children/>
+        </Params>
+        <Params name="Schematization">
+            <Params>
+                <var type="INT" name="C">0</var>
+                <var type="FLOAT" name="start angle">0</var>
+                <var type="BOOL" name="also opposite angle">1</var>
+                <var type="BOOL" name="adjust struct">1</var>
+                <var type="BOOL" name="rectify struct">1</var>
+                <var type="FLOAT" name="angle speed">0</var>
+            </Params>
+            <Children/>
+        </Params>
+        <Params name="Structural modifiers">
+            <Params>
+                <var type="FLOAT" name="free end extension">0</var>
+                <var type="FLOAT" name="extension x">1</var>
+                <var type="FLOAT" name="extension y">1</var>
+                <var type="FLOAT" name="wiggle_length_thresh">0.5</var>
+                <var type="FLOAT" name="horizontal_wiggle_thresh">2</var>
+                <var type="FLOAT" name="vertical_wiggle_thresh">2</var>
+                <var type="BOOL" name="show serifs">0</var>
+                <var type="FLOAT" name="serif thresh">0.25</var>
+                <var type="BOOL" name="convert serifs">0</var>
+                <var type="FLOAT" name="serif probability">1</var>
+            </Params>
+            <Children/>
+        </Params>
+        <Params name="Planning">
+            <Params>
+                <var type="BOOL" name="planning active">0</var>
+                <var type="BOOL" name="Paul&apos;s version">1</var>
+                <var type="FLOAT" name="Paul length weight">0</var>
+                <var type="FLOAT" name="k horizontal">0.5</var>
+                <var type="FLOAT" name="k vertical">1</var>
+                <var type="FLOAT" name="k left">1</var>
+                <var type="FLOAT" name="k top">0.7</var>
+                <var type="FLOAT" name="k length">1</var>
+                <var type="FLOAT" name="k distance">0.25</var>
+            </Params>
+            <Children/>
+        </Params>
+        <Params name="Background">
+            <Params>
+                <var type="COLOR" name="background color">1e-06 0 0 1</var>
+            </Params>
+            <Children/>
+        </Params>
+        <Params name="Particle Font Stylization">
+            <Params>
+                <var type="FLOAT" name="num_particles">115.746</var>
+                <var type="BOOL" name="also opposite">1</var>
+                <var type="FLOAT" name="kp">84.783</var>
+                <var type="FLOAT" name="damping_ratio">0.449</var>
+                <var type="FLOAT" name="num_iterations">2.196</var>
+                <var type="FLOAT" name="steps_per_second">245.652</var>
+                <var type="FLOAT" name="spawn_interval">9.336</var>
+                <var type="FLOAT" name="rotational_force">0</var>
+                <var type="FLOAT" name="random_radial_force">1243.09</var>
+                <var type="FLOAT" name="rand_start">0</var>
+                <var type="FLOAT" name="rot_speed">-30.918</var>
+                <var type="FLOAT" name="fade">0.033</var>
+                <var type="FLOAT" name="psize">21.193</var>
+                <var type="COLOR" name="p color">1 0.323094 0.0232558 0.258824</var>
+                <var type="FLOAT" name="centripetal_alpha">0.978</var>
+                <var type="FLOAT" name="speed">131.522</var>
+            </Params>
+            <Children/>
+        </Params>
+        <Params name="Stroke">
+            <Params>
+                <var type="FLOAT" name="w0">1</var>
+                <var type="FLOAT" name="w1">1</var>
+                <var type="FLOAT" name="thickness">3.961</var>
+            </Params>
+            <Children/>
+        </Params>
+    </Children>
+</Params>

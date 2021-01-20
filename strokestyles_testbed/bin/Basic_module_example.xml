@@ -1,0 +1,8 @@
+<Params name="Params">
+    <Params>
+        <var type="FLOAT" name="float">0</var>
+        <var type="BOOL" name="checkbox">1</var>
+        <var type="INT" name="count">0</var>
+    </Params>
+    <Children/>
+</Params>

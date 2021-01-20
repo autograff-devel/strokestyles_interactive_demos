@@ -1,0 +1,19 @@
+[
+    {"Text Layout":
+    [
+        {"Text.text": "Input Text"},
+        {"Text.spacing": "Letter Spacing"},
+        {"Camera.pos x" : "X"},
+        {"Camera.pos y" : "Y"},
+        {"Camera.zoom": "Zoom"},
+        {"draw original": "Draw Original"}
+	]},
+	{"Stylization":
+		[
+			{"Similarity Font Stylization.show similarities (disable for rendering)": "Show similarities (disable for rendering)"},
+			{"Clustering.thresh": "Clustering thresh"},
+			{"Similarity Font Stylization.dt": "Anim speed"},
+            {"Similarity Font Stylization.id offset" : "Cluster id offset"}
+		]
+	}
+]

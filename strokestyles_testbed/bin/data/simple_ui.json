@@ -1,0 +1,54 @@
+[
+    {"Text Layout":
+    [
+        {"Text.text": "Input Text"},
+        {"Text.spacing": "Letter Spacing"},
+        {"Text.font size": "Letter Size"},
+        {"Text.tx": "Position X"},
+        {"Text.ty": "Position Y"}
+    ]},
+
+    {"Stylisation":
+    [
+        {"Stylization.thickness": "Thickness"},
+        {"Stylization.isotropy": "Linearity (1-Bend)"},
+        {"Stylization.precision angle": "Bend Direction"},
+        {"Stylization.global smoothness": "Smoothing"},
+        {"Stylization.flat angle smoothing": "Flat angle smoothing"},
+        {"Stylization.flat angle multiplier": "Flat angle multiplier"},
+        {"Stylization.force periodic": "Smooth Caps (periodic)"},
+        {"Stylization.cap smoothness": "Cap Smoothness"},
+        {"Stylization.Schematization.C": "Angle quantization (0 - None)"},
+        {"Stylization.Schematization.start angle": "Quantization start angle"},
+        {"Stylization.End extension.end extension": "End extension"}
+    ]},
+
+    {"Fill and Outline":
+    [
+        {"Fill.fill seed": "Seed"},
+        {"Fill.face alpha": "Face alpha"},
+        {"Outline and Shadow.line thickness": "Outline Thickness"},
+        {"Outline and Shadow.outl color": "Outline Color"}
+    ]},
+
+    {"Background":
+    [
+        {"Background.background color":"Background Color"},
+        {"Background.bubble color":"Background Effect Color"},
+        {"Background.bg bubble alpha":"Bubble Alpha"},
+        {"Background.Background shape.drips active": "Draw Drippy Background"},
+        {"Background.Background shape.drip angle offset": "Drip Pointyness"}
+    ]},
+
+    {"Extrusion":
+    [
+        {"Extrusion.extrusion active":"Extrusion Active"},
+        {"Extrusion.extruion depth":"Depth"},
+        {"Extrusion.thicken":"Extrusion Thicknening"},
+        {"Outline and Shadow.out angle": "Extrusion Direction"},
+        {"Extrusion.extr angle thresh": "Angle Threshold" },
+        {"Extrusion.luminosity": "Luminosity"},
+        {"Extrusion.saturation": "Saturation"}
+
+    ]}
+]

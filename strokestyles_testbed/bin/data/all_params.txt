@@ -1,0 +1,76 @@
+Background.background color
+Brush Trajectory.Base speed
+Brush Trajectory.Lowpass
+Brush Trajectory.Max radius
+Brush Trajectory.Min radius
+Brush Trajectory.Sample dist
+Brush Trajectory.Vary width
+Brush.Aspect ratio
+Brush.Color
+Brush.Hole
+Brush.Power
+Brush.Randomness
+Brush.Re-orient
+Brush.Rotation
+Brush.Sharpness
+Brush.Size
+Brush.ball texture
+Drips.drip_Ac
+Drips.drip_height_ratio
+Drips.drip_hvariance
+Drips.drip_maxw
+Drips.drip_minw
+Drips.drip_num
+Drips.drip_peak_thresh
+Drips.drip_smooth_sigma
+Drips.drip_speed
+Drips.drip_thresh
+Drips.drips active
+Trajectory generation.Advanced.centripetal alpha
+Trajectory generation.Advanced.end cov scale
+Trajectory generation.Advanced.end weight
+Trajectory generation.Advanced.force interpolation
+Trajectory generation.Advanced.max displacement
+Trajectory generation.Advanced.order
+Trajectory generation.Advanced.rectify sleeve eps
+Trajectory generation.Advanced.ref spine width
+Trajectory generation.Advanced.subdivision
+Trajectory generation.Advanced.subsampling
+Trajectory generation.activation sigma
+Trajectory generation.cap smoothness
+Trajectory generation.corner cov
+Trajectory generation.corner thresh
+Trajectory generation.flat angle multiplier
+Trajectory generation.flat angle smoothing
+Trajectory generation.force periodic
+Trajectory generation.global smoothness
+Trajectory generation.isotropy
+Trajectory generation.opt x0
+Trajectory generation.period
+Trajectory generation.precision angle
+Trajectory generation.raidus scale
+Trajectory generation.rectify
+Trajectory generation.shindoa cov
+Trajectory generation.smooth power
+Trajectory generation.spline multiplicity
+Trajectory generation.use shinoda
+Trajectory generation.width smoothness
+Visualization Options.C
+Visualization Options.Num Strokes
+Visualization Options.Num traces
+Visualization Options.Split polylines
+Visualization Options.Stroking mode
+Visualization Options.Thickness
+Visualization Options.Variable thickess
+Visualization Options.anchor_end
+Visualization Options.anchor_start
+Visualization Options.draw stroke polygon
+Visualization Options.draw tied gauss
+Visualization Options.gui
+Visualization Options.smoothness variation
+Visualization Options.start_ang
+Visualization Options.tied cov x
+Visualization Options.tied cov y
+Visualization Options.transparent save
+Visualization Options.update every frame
+random seed

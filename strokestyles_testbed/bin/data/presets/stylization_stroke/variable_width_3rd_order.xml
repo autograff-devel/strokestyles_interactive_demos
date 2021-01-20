@@ -1,0 +1,158 @@
+<Params name="Params">
+    <Params>
+        <var type="FLOAT" name="random seed">10</var>
+        <var type="STRING" name="glyph dir">./../../../python/projects/strokestyles/output/default/data/glyphs</var>
+        <var type="BOOL" name="draw stroke polygon">0</var>
+        <var type="BOOL" name="draw original">1</var>
+        <var type="BOOL" name="transparent save">1</var>
+        <var type="BOOL" name="update every frame">1</var>
+        <var type="BOOL" name="draw gaussians">0</var>
+        <var type="FLOAT" name="sigma mul">1</var>
+        <var type="FLOAT" name="anim time">1</var>
+        <var type="FLOAT" name="min_merge_length">50</var>
+        <var type="FLOAT" name="simplify eps">3.709</var>
+        <var type="FLOAT" name="straighten thresh">0.033</var>
+        <var type="BOOL" name="gui active">1</var>
+    </Params>
+    <Children>
+        <Params name="Camera">
+            <Params>
+                <var type="FLOAT" name="pos x">0</var>
+                <var type="FLOAT" name="pos y">0</var>
+                <var type="FLOAT" name="zoom">1</var>
+                <var type="FLOAT" name="rotation">0</var>
+            </Params>
+            <Children/>
+        </Params>
+        <Params name="Text">
+            <Params>
+                <var type="STRING" name="text">RSEPR</var>
+                <var type="FLOAT" name="tx">0</var>
+                <var type="FLOAT" name="ty">-9.89</var>
+                <var type="FLOAT" name="spacing">0.982</var>
+                <var type="INT" name="font index">31</var>
+            </Params>
+            <Children/>
+        </Params>
+        <Params name="Schematization">
+            <Params>
+                <var type="INT" name="C">0</var>
+                <var type="SELECTION" name="Quantization angle">0</var>
+                <var type="FLOAT" name="start angle">68.242</var>
+                <var type="FLOAT" name="interpolation lowpass">1</var>
+                <var type="BOOL" name="also opposite angle">0</var>
+                <var type="BOOL" name="adjust struct">1</var>
+                <var type="BOOL" name="rectify struct">0</var>
+                <var type="BOOL" name="animate start angle">0</var>
+                <var type="FLOAT" name="angle speed">0</var>
+            </Params>
+            <Children/>
+        </Params>
+        <Params name="Planning">
+            <Params>
+                <var type="BOOL" name="planning active">1</var>
+                <var type="FLOAT" name="k_horizontal">0.1</var>
+                <var type="FLOAT" name="k_vertical">2.919</var>
+                <var type="FLOAT" name="k_vertical_abs">27.886</var>
+                <var type="FLOAT" name="k_top">7.144</var>
+                <var type="FLOAT" name="k_length">0.1</var>
+                <var type="FLOAT" name="left_weight">0.085</var>
+            </Params>
+            <Children/>
+        </Params>
+        <Params name="Stroke">
+            <Params/>
+            <Children/>
+        </Params>
+        <Params name="Background">
+            <Params>
+                <var type="COLOR" name="background color">0.901961 0.901961 0.901961 1</var>
+            </Params>
+            <Children/>
+        </Params>
+        <Params name="Stroke Font Stylization">
+            <Params>
+                <var type="BOOL" name="Debug widths">0</var>
+                <var type="SELECTION" name="Stroking mode">1</var>
+                <var type="FLOAT" name="Thickness">0.668</var>
+                <var type="BOOL" name="Variable thickess">1</var>
+                <var type="BOOL" name="Split polylines">0</var>
+                <var type="FLOAT" name="Num traces">1</var>
+                <var type="FLOAT" name="smoothness variation">1.093</var>
+                <var type="FLOAT" name="anchor_start">0</var>
+                <var type="FLOAT" name="anchor_end">0</var>
+                <var type="INT" name="Num Strokes">0</var>
+            </Params>
+            <Children/>
+        </Params>
+        <Params name="Brush">
+            <Params>
+                <var type="COLOR" name="Color">0 0 0 0.184314</var>
+                <var type="FLOAT" name="Size">0.211</var>
+                <var type="FLOAT" name="Aspect ratio">0.414</var>
+                <var type="FLOAT" name="Rotation">3.297</var>
+                <var type="FLOAT" name="Sharpness">9.538</var>
+                <var type="FLOAT" name="Power">3.173</var>
+                <var type="FLOAT" name="Hole">2</var>
+                <var type="BOOL" name="Re-orient">1</var>
+                <var type="FLOAT" name="Randomness">0</var>
+                <var type="STRING" name="ball texture">data/images/ball_1.png</var>
+            </Params>
+            <Children/>
+        </Params>
+        <Params name="Brush Trajectory">
+            <Params>
+                <var type="FLOAT" name="Min radius">0.141</var>
+                <var type="FLOAT" name="Max radius">1</var>
+                <var type="FLOAT" name="Sample dist">0.1</var>
+                <var type="FLOAT" name="Lowpass">1</var>
+                <var type="FLOAT" name="Base speed">0.591</var>
+                <var type="BOOL" name="Vary width">0</var>
+            </Params>
+            <Children/>
+        </Params>
+        <Params name="Trajectory generation">
+            <Params>
+                <var type="BOOL" name="rectify">1</var>
+                <var type="FLOAT" name="isotropy">1</var>
+                <var type="FLOAT" name="precision angle">80.11</var>
+                <var type="FLOAT" name="global smoothness">12.885</var>
+                <var type="FLOAT" name="width smoothness">4.905</var>
+                <var type="FLOAT" name="activation sigma">0.239</var>
+                <var type="FLOAT" name="raidus scale">278.929</var>
+                <var type="FLOAT" name="corner cov">0.002</var>
+                <var type="FLOAT" name="corner thresh">0.354</var>
+                <var type="FLOAT" name="smooth power">0.775</var>
+                <var type="FLOAT" name="miter limit">1.5</var>
+                <var type="FLOAT" name="free end extension">-0.5</var>
+                <var type="FLOAT" name="extension x">1</var>
+                <var type="FLOAT" name="extension y">1</var>
+                <var type="BOOL" name="unfold">0</var>
+                <var type="FLOAT" name="fold angle sigma">0.785398</var>
+                <var type="INT" name="period">2</var>
+                <var type="FLOAT" name="flat angle smoothing">0</var>
+                <var type="FLOAT" name="flat angle multiplier">2</var>
+                <var type="BOOL" name="force periodic">0</var>
+                <var type="FLOAT" name="cap smoothness">0.5</var>
+            </Params>
+            <Children>
+                <Params name="Advanced">
+                    <Params>
+                        <var type="INT" name="order">3</var>
+                        <var type="INT" name="subdivision">8</var>
+                        <var type="INT" name="subsampling">4</var>
+                        <var type="INT" name="ref subdivision">10</var>
+                        <var type="FLOAT" name="ref spine width">0.1</var>
+                        <var type="FLOAT" name="rectify sleeve eps">33.791</var>
+                        <var type="FLOAT" name="end weight">53.571</var>
+                        <var type="FLOAT" name="end cov scale">0.113</var>
+                        <var type="FLOAT" name="force interpolation">0</var>
+                        <var type="FLOAT" name="centripetal alpha">0</var>
+                        <var type="FLOAT" name="max displacement">3.125</var>
+                    </Params>
+                    <Children/>
+                </Params>
+            </Children>
+        </Params>
+    </Children>
+</Params>

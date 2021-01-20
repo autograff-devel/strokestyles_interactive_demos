@@ -1,0 +1,60 @@
+[
+    {"Global stroke parameters":
+    [
+        {"Smoothing.thickness": "Thickness"},
+        {"Smoothing.global smoothness": "Smoothing"},
+        {"Smoothing.isotropy": "Isotropy"},
+        {"Smoothing.precision angle": "Bend angle"},
+        {"Smoothing.cap smoothness": "Cap smoothness"},
+        
+        {"Advanced":
+        [
+            {"Smoothing.miter limit": "Miter limit"},
+            {"Smoothing.LQT.order": "Order"},
+            {"Smoothing.LQT.max displacement": "Max displacement"}
+        ]}
+    ]},
+    {"Layering":
+    [
+        {"Layering.active": "Active"},
+        {"Layering.fold thresh": "Folding"},
+        {"Layering.shuffle z": "Random depth ordering"},
+        {"Layering.z seed": "Random depth seed"},
+        {"Layering.disambiguate overlaps": "Disambiguate overlaps"},
+        {"Layering.all unions": "All unions"},
+        {"Advanced":
+        [
+            {"Layering.scale factor": "Scale factor"}
+        ]}
+    ]},
+    {"Fill":
+        [
+            {"Fill.palette": "Palette"},
+            {"Fill.fill seed": "Random seed"},
+            {"Fill.geometric effects": "Show faces"},
+            {"Fill.face alpha": "Faces alpha"},
+            {"Fill.random offset": "Faces offset"},
+            {"Fill.sqrt fill area thresh": "Faces min area"},
+            {"Fill.bubble alpha": "Gradient alpha"}
+        ]},
+    {"Outline":
+    [
+        {"Outline and Shadow.line thickness": "Thickness"}
+    ]},
+    {"Highlights":
+    [
+        {"Highlights.light dir": "Light direction"},
+        {"Highlights.highlight thickness": "Thickness"},
+        {"Highlights.highlight alpha": "Alpha"},
+        {"Highlights.num highlights": "Num sparkles"},
+        {"Highlights.shine size": "Sparkles size"}
+    ]},
+    {"Extrusion":
+    [
+        {"Extrusion.extrusion active": "Active"},
+        {"Extrusion.extrusion depth": "Depth"},
+        {"Extrusion.extrusion color": "Color"},
+        {"Extrusion.luminosity": "Luminosity"},
+        {"Extrusion.saturation": "Saturation"}
+    ]}
+]

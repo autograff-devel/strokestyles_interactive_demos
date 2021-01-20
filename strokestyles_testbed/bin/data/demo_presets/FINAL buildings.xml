@@ -1,0 +1,52 @@
+<Params name="Params">
+    <Params>
+        <var type="FLOAT" name="random seed">10</var>
+        <var type="BOOL" name="draw stroke polygon">0</var>
+        <var type="BOOL" name="draw original">0</var>
+        <var type="FLOAT" name="original offset">1</var>
+        <var type="BOOL" name="shift original">0</var>
+        <var type="BOOL" name="transparent save">1</var>
+        <var type="BOOL" name="update every frame">0</var>
+        <var type="FLOAT" name="outline thickness">2</var>
+    </Params>
+    <Children>
+        <Params name="Camera">
+            <Params>
+                <var type="FLOAT" name="pos x">145.251</var>
+                <var type="FLOAT" name="pos y">-212.579</var>
+                <var type="FLOAT" name="zoom">0.834</var>
+                <var type="FLOAT" name="rotation">0</var>
+            </Params>
+            <Children/>
+        </Params>
+        <Params name="Text">
+            <Params>
+                <var type="STRING" name="text">REPLACE</var>
+                <var type="FLOAT" name="spacing">1</var>
+                <var type="STRING" name="font name">Discourse Wide Light Fill</var>
+            </Params>
+            <Children/>
+        </Params>
+        <Params name="Background">
+            <Params>
+                <var type="COLOR" name="background color">1 0.99999 0.99999 1</var>
+            </Params>
+            <Children/>
+        </Params>
+        <Params name="Similarity Font Stylization">
+            <Params>
+                <var type="BOOL" name="show similarities (disable for rendering)">0</var>
+                <var type="STRING" name="image path">data/images/stroke_replacements_daichi</var>
+                <var type="FLOAT" name="dt">0.5</var>
+                <var type="FLOAT" name="id offset">3.459</var>
+            </Params>
+            <Children/>
+        </Params>
+        <Params name="Clustering">
+            <Params>
+                <var type="FLOAT" name="thresh">0.078</var>
+            </Params>
+            <Children/>
+        </Params>
+    </Children>
+</Params>

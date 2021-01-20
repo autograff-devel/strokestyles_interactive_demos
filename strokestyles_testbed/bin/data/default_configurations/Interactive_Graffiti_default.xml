@@ -1,0 +1,149 @@
+<Params name="Params">
+    <Params>
+        <var type="FLOAT" name="random seed">10</var>
+    </Params>
+    <Children>
+        <Params name="Visualization Options">
+            <Params>
+                <var type="BOOL" name="draw stroke polygon">0</var>
+                <var type="BOOL" name="transparent save">1</var>
+                <var type="BOOL" name="update every frame">1</var>
+                <var type="BOOL" name="gui active">1</var>
+            </Params>
+            <Children/>
+        </Params>
+        <Params name="Smoothing">
+            <Params>
+                <var type="FLOAT" name="thickness">1.352</var>
+                <var type="FLOAT" name="isotropy">1</var>
+                <var type="FLOAT" name="precision angle">-41.932</var>
+                <var type="FLOAT" name="global smoothness">241.478</var>
+                <var type="FLOAT" name="cap smoothness">0.1</var>
+                <var type="FLOAT" name="miter limit">1.345</var>
+                <var type="BOOL" name="opt x0">0</var>
+                <var type="INT" name="C">0</var>
+                <var type="FLOAT" name="start_ang">39.836</var>
+                <var type="FLOAT" name="min_d_cos_turning">5.795</var>
+                <var type="FLOAT" name="refine_tol">0.001</var>
+            </Params>
+            <Children>
+                <Params name="Thresholds">
+                    <Params>
+                        <var type="FLOAT" name="radius scale">279.59</var>
+                        <var type="FLOAT" name="corner cov">0</var>
+                        <var type="FLOAT" name="corner thresh">3.852</var>
+                        <var type="FLOAT" name="smooth power">1.044</var>
+                    </Params>
+                    <Children/>
+                </Params>
+                <Params name="LQT">
+                    <Params>
+                        <var type="INT" name="order">2</var>
+                        <var type="INT" name="subdivision">4</var>
+                        <var type="INT" name="subsampling">2</var>
+                        <var type="INT" name="polygon split">4</var>
+                        <var type="INT" name="period">2</var>
+                        <var type="FLOAT" name="spine offset amt">0.5</var>
+                        <var type="FLOAT" name="activation sigma">0.616</var>
+                        <var type="FLOAT" name="end weight">280.055</var>
+                        <var type="FLOAT" name="end cov scale">0.01</var>
+                        <var type="FLOAT" name="force interpolation">0</var>
+                        <var type="FLOAT" name="centripetal alpha">0</var>
+                        <var type="FLOAT" name="max displacement">19.126</var>
+                    </Params>
+                    <Children/>
+                </Params>
+            </Children>
+        </Params>
+        <Params name="Layering">
+            <Params>
+                <var type="BOOL" name="layering active">1</var>
+                <var type="BOOL" name="all unions">0</var>
+                <var type="BOOL" name="draw hidden">0</var>
+                <var type="FLOAT" name="z seed">374.943</var>
+                <var type="BOOL" name="shuffle z">0</var>
+                <var type="BOOL" name="disambiguate overlaps">1</var>
+                <var type="FLOAT" name="fold thresh">0</var>
+                <var type="FLOAT" name="scale factor">5.124</var>
+            </Params>
+            <Children>
+                <Params name="Advanced">
+                    <Params>
+                        <var type="FLOAT" name="normal thresh">1</var>
+                    </Params>
+                    <Children/>
+                </Params>
+            </Children>
+        </Params>
+        <Params name="Fill">
+            <Params>
+                <var type="FLOAT" name="fill seed">213.855</var>
+                <var type="BOOL" name="geometric effects">1</var>
+                <var type="FLOAT" name="random offset">44.034</var>
+                <var type="FLOAT" name="face alpha">0.25</var>
+                <var type="COLOR" name="fill color">1 1 1 1</var>
+                <var type="FLOAT" name="sqrt fill area thresh">21.307</var>
+                <var type="FLOAT" name="num bubbles">70</var>
+                <var type="FLOAT" name="bubble alpha">0.639</var>
+                <var type="FLOAT" name="bubble radius">600</var>
+                <var type="SELECTION" name="palette">38</var>
+            </Params>
+            <Children/>
+        </Params>
+        <Params name="Outline and Shadow">
+            <Params>
+                <var type="FLOAT" name="line thickness">2.734</var>
+                <var type="FLOAT" name="out angle">45</var>
+                <var type="FLOAT" name="outl w">4</var>
+                <var type="FLOAT" name="outl w0">1</var>
+                <var type="FLOAT" name="outl w1">1</var>
+                <var type="FLOAT" name="outl miter limit">1</var>
+                <var type="COLOR" name="outl color">0 0 0 1</var>
+                <var type="FLOAT" name="outl offset">0</var>
+            </Params>
+            <Children/>
+        </Params>
+        <Params name="Highlights">
+            <Params>
+                <var type="FLOAT" name="highlight thickness">3</var>
+                <var type="FLOAT" name="light dir">45</var>
+                <var type="FLOAT" name="highlight alpha">1</var>
+                <var type="FLOAT" name="shine size">83.242</var>
+                <var type="FLOAT" name="num highlights">1.065</var>
+            </Params>
+            <Children/>
+        </Params>
+        <Params name="Extrusion">
+            <Params>
+                <var type="BOOL" name="extrusion active">1</var>
+                <var type="FLOAT" name="extruion depth">30</var>
+                <var type="FLOAT" name="extr angle thresh">30</var>
+                <var type="FLOAT" name="smooth sigma">1</var>
+                <var type="FLOAT" name="thicken">1</var>
+                <var type="FLOAT" name="luminosity">1</var>
+                <var type="FLOAT" name="saturation">0</var>
+                <var type="COLOR" name="extrusion color">0 0 0 1</var>
+            </Params>
+            <Children/>
+        </Params>
+        <Params name="Background">
+            <Params>
+                <var type="COLOR" name="background color">1 0.99999 0.99999 1</var>
+                <var type="FLOAT" name="background seed">5</var>
+                <var type="BOOL" name="drips active">0</var>
+                <var type="BOOL" name="auto bubble color">0</var>
+                <var type="COLOR" name="bubble color 1">1 0.6 0 1</var>
+                <var type="COLOR" name="bubble color 2">1 0 0 1</var>
+                <var type="FLOAT" name="bubble hue offset">0</var>
+                <var type="FLOAT" name="drip variance">0.3</var>
+                <var type="FLOAT" name="num verices">20</var>
+                <var type="FLOAT" name="fuzzyness">0.5</var>
+                <var type="FLOAT" name="drip length">100</var>
+                <var type="FLOAT" name="drip angle offset">0</var>
+                <var type="INT" name="num offset steps">3</var>
+                <var type="FLOAT" name="shape offset amt">100</var>
+            </Params>
+            <Children/>
+        </Params>
+    </Children>
+</Params>

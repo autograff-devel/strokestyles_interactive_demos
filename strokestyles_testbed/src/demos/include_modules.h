@@ -1,0 +1,8 @@
+//#include "curved_skeletal_test.h"
+#include "demos/basic_module.h"
+#include "demos/font_stylization_graffiti.h"
+#include "demos/font_stylization_particle.h"
+#include "demos/font_stylization_similarity.h"
+#include "demos/font_stylization_stroke.h"
+#include "demos/interactive_calligraphy.h"
+#include "demos/interactive_graff.h"

@@ -1,0 +1,72 @@
+{
+ "entries": [
+  {
+   "mode_name": "Stroke Segmentation Demo",
+   "name": "STROKES"
+  },
+  {
+   "mode_name": "Stroke Segmentation Demo",
+   "name": "Kana"
+  },
+  {
+   "mode_name": "Skeletal Stroke Export",
+   "name": "Giddyup RODEO"
+  },
+  {
+   "mode_name": "Stroke Font Stylization",
+   "name": "Script ADOBE"
+  },
+  {
+   "mode_name": "Stroke Font Stylization",
+   "name": "Calligraphic MAX"
+  },
+  {
+   "mode_name": "Particle Font Stylization",
+   "name": "PARTY"
+  },
+  {
+   "mode_name": "Similarity Font Stylization",
+   "name": "REPLACE buildings START"
+  },
+  {
+   "mode_name": "Similarity Font Stylization",
+   "name": "FINAL buildings"
+  },
+  {
+   "mode_name": "Similarity Font Stylization",
+   "name": "MAX gears START"
+  },
+  {
+   "mode_name": "Similarity Font Stylization",
+   "name": "FINAL gears"
+  },
+  {
+   "mode_name": "Stroke Font Stylization",
+   "name": "GRAFF HWT"
+  },
+  {
+   "mode_name": "Graffiti Font Stylization",
+   "name": "Kegger"
+  },
+  {
+   "mode_name": "Graffiti Font Stylization",
+   "name": "HWT 1"
+  },
+  {
+   "mode_name": "Graffiti Font Stylization",
+   "name": "Georgia"
+  },
+  {
+   "mode_name": "Graffiti Font Stylization",
+   "name": "HWT Bubble"
+  },
+  {
+   "mode_name": "Graffiti Font Stylization",
+   "name": "Kanji"
+  },
+  {
+   "mode_name": "Graffiti Font Stylization",
+   "name": "STREETWAREZ"
+  }
+ ]
+}

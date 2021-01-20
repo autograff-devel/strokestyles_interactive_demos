@@ -1,0 +1,63 @@
+[
+	{"Visualization Options.draw stroke polygon" : "draw stroke polygon"},
+	{"Visualization Options.transparent save" : "transparent save"},
+    {"Stroking":
+        [
+			{"Visualization Options.Stroking mode" : "Stroking mode"},
+			{"Visualization Options.Thickness" : "Thickness"},
+			{"Visualization Options.Variable thickess" : "Variable thickess"}
+        ]
+    },
+    {"Trajectory generation":
+        [
+            {"Trajectory generation.global smoothness": "Smoothing"},
+            {"Trajectory generation.isotropy": "Isotropy"},
+            {"Trajectory generation.precision angle": "Bend angle"},
+            {"Corners":
+            [
+                {"Trajectory generation.corner thresh": "Corner thresh"},
+                {"Trajectory generation.corner cov": "Corner smoothness"}
+            ]
+            },
+            {"Advanced":
+            [
+                {"Trajectory generation.Advanced.order": "Order"},
+                {"Trajectory generation.Advanced.subdivision" : "subdivision"},
+                {"Trajectory generation.Advanced.subsampling" : "subsampling"},
+                {"Trajectory generation.Advanced.max displacement": "Max displacement"},
+                {"Trajectory generation.width smoothness": "Width smoothing"},
+                {"Trajectory generation.opt x0": "Optimize Initial State"},
+				{"Trajectory generation.activation sigma": "State Activation"},
+				{"Trajectory generation.Advanced.end weight" : "end weight"}
+            ]}
+    ]},
+    {"Brush":
+        [
+            {"Brush.Color":"Color"},
+            {"Brush.Aspect ratio":"Aspect ratio"},
+            {"Brush.Rotation":"Rotation"},
+            {"Brush.Sharpness":"Sharpness"},
+            {"Brush.Power":"Shape"},
+            {"Brush.Hole":"Hole"},
+            {"Brush Trajectory.Sample dist":"Sampling step"},
+            {"Brush.Randomness":"Randomness"},
+
+            {"Drips":[
+                {"Drips.drips active" : "drips active"},
+                {"Drips.drip_minw" : "drip_minw"},
+                {"Drips.drip_maxw" : "drip_maxw"},
+                {"Drips.drip_height_ratio" : "drip_height_ratio"},
+                {"Drips.drip_thresh" : "drip_thresh"},
+                {"Drips.drip_smooth_sigma" : "drip_smooth_sigma"},
+                {"Drips.drip_peak_thresh" : "drip_peak_thresh"},
+                {"Drips.drip_num" : "drip_num"},
+                {"Drips.drip_Ac" : "drip_Ac"},
+				{"Drips.drip_hvariance" : "drip_hvariance"},
+				{"Drips.drip_speed" : "drip_speed"}
+            ]}
+        ]
+    }
+    
+    
+   
+]

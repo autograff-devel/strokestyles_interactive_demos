@@ -1,0 +1,95 @@
+<Params name="Params">
+    <Params>
+        <var type="FLOAT" name="random seed">10</var>
+        <var type="STRING" name="glyph dir">/Users/colormotor/develop/autograff/strokestyles_system/python/projects/strokestyles/output/originals/data/glyphs</var>
+        <var type="BOOL" name="draw stroke polygon">0</var>
+        <var type="BOOL" name="draw original">1</var>
+        <var type="BOOL" name="transparent save">1</var>
+        <var type="BOOL" name="update every frame">1</var>
+        <var type="BOOL" name="draw gaussians">0</var>
+        <var type="BOOL" name="g_use_ref_width_adjustment">0</var>
+        <var type="BOOL" name="pre_rectify_load">0</var>
+        <var type="BOOL" name="pre_rectify_schematize">0</var>
+        <var type="FLOAT" name="sigma mul">1</var>
+        <var type="FLOAT" name="anim time">1</var>
+        <var type="FLOAT" name="simplify eps">0.01</var>
+        <var type="FLOAT" name="straighten thresh">0.1</var>
+        <var type="BOOL" name="gui active">0</var>
+    </Params>
+    <Children>
+        <Params name="Camera">
+            <Params>
+                <var type="FLOAT" name="pos x">0</var>
+                <var type="FLOAT" name="pos y">0</var>
+                <var type="FLOAT" name="zoom">1</var>
+                <var type="FLOAT" name="rotation">0</var>
+            </Params>
+            <Children/>
+        </Params>
+        <Params name="Text">
+            <Params>
+                <var type="STRING" name="text">REPLACE</var>
+                <var type="FLOAT" name="spacing">1</var>
+                <var type="STRING" name="font name">Discourse Wide Light Fill</var>
+            </Params>
+            <Children/>
+        </Params>
+        <Params name="Schematization">
+            <Params>
+                <var type="INT" name="C">0</var>
+                <var type="FLOAT" name="start angle">0</var>
+                <var type="BOOL" name="also opposite angle">1</var>
+                <var type="BOOL" name="adjust struct">1</var>
+                <var type="BOOL" name="rectify struct">1</var>
+                <var type="FLOAT" name="angle speed">0</var>
+            </Params>
+            <Children/>
+        </Params>
+        <Params name="Structural modifiers">
+            <Params>
+                <var type="FLOAT" name="free end extension">0</var>
+                <var type="FLOAT" name="extension x">1</var>
+                <var type="FLOAT" name="extension y">1</var>
+                <var type="FLOAT" name="wiggle_length_thresh">0.5</var>
+                <var type="FLOAT" name="horizontal_wiggle_thresh">2</var>
+                <var type="FLOAT" name="vertical_wiggle_thresh">2</var>
+            </Params>
+            <Children/>
+        </Params>
+        <Params name="Planning">
+            <Params>
+                <var type="BOOL" name="planning active">0</var>
+                <var type="FLOAT" name="k_horizontal">2</var>
+                <var type="FLOAT" name="k_vertical">1</var>
+                <var type="FLOAT" name="k_vertical_abs">2</var>
+                <var type="FLOAT" name="k_top">3</var>
+                <var type="FLOAT" name="k_length">3</var>
+                <var type="FLOAT" name="left_weight">0.1</var>
+            </Params>
+            <Children/>
+        </Params>
+        <Params name="Stroke">
+            <Params/>
+            <Children/>
+        </Params>
+        <Params name="Background">
+            <Params>
+                <var type="COLOR" name="background color">1 0.99999 0.99999 1</var>
+            </Params>
+            <Children/>
+        </Params>
+        <Params name="Similarity Font Stylization">
+            <Params>
+                <var type="BOOL" name="show similarities (disable for rendering)">1</var>
+                <var type="STRING" name="image path">data/images/stroke_replacements_daichi</var>
+            </Params>
+            <Children/>
+        </Params>
+        <Params name="Clustering">
+            <Params>
+                <var type="FLOAT" name="thresh">0.078</var>
+            </Params>
+            <Children/>
+        </Params>
+    </Children>
+</Params>

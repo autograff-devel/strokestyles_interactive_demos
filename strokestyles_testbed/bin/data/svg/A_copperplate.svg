@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg8"
+   sodipodi:docname="A_copperplate.svg"
+   inkscape:version="0.92.2 5c3e80d, 2017-08-06">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4"
+     inkscape:cx="328.76391"
+     inkscape:cy="613.38693"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="2048"
+     inkscape:window-height="1190"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:55.14368439px;line-height:1.25;font-family:Kefa;-inkscape-font-specification:'Kefa, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.37859213"
+       x="84.216385"
+       y="163.47116"
+       id="text3705"
+       transform="scale(1.0818656,0.92432927)"><tspan
+         sodipodi:role="line"
+         id="tspan3703"
+         x="84.216385"
+         y="212.49803"
+         style="stroke-width:1.37859213" /></text>
+    <g
+       aria-label="A"
+       transform="scale(0.87205309,1.1467192)"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:97.99237823px;line-height:1.25;font-family:Copperplate;-inkscape-font-specification:Copperplate;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:2.44980955"
+       id="text3709">
+      <path
+         d="m 122.3192,109.47051 -8.23136,-18.226585 -9.21128,18.226585 z m -36.943123,18.22658 q 1.273901,-0.19598 1.959848,-1.2739 0.783939,-1.07792 1.469885,-2.44981 L 106.9344,85.854344 q 0.68595,-1.2739 1.17591,-2.351817 0.58795,-1.077916 0.58795,-1.861855 0,-0.979924 -0.68594,-1.371893 -0.68595,-0.39197 -1.46989,-0.587954 v -1.763863 h 16.56071 v 1.763863 q -0.68594,0.195984 -1.37189,0.587954 -0.68595,0.293977 -0.68595,1.371893 0,0.783939 0.29398,1.567878 0.39197,0.783939 1.07792,2.05784 l 20.38241,39.8829 q 0.48996,1.07791 1.2739,1.56788 0.88193,0.48996 1.95985,0.97992 v 1.76386 H 128.7867 v -1.76386 q 0.39197,0 0.97992,-0.29398 0.58796,-0.29397 0.58796,-0.88193 0,-0.97992 -0.78394,-2.5478 l -3.72371,-7.25144 h -23.91014 l -3.527726,6.95746 q -0.979924,2.05784 -0.979924,2.93977 0,1.07792 1.861855,1.07792 v 1.76386 H 85.376077 Z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Copperplate;-inkscape-font-specification:Copperplate;stroke-width:2.44980955"
+         id="path3711" />
+    </g>
+  </g>
+</svg>

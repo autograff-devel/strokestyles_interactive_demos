@@ -1,0 +1,16 @@
+<Params name="Params">
+    <Params>
+        <var type="BOOL" name="debug draw">1</var>
+        <var type="BOOL" name="draw gaussians">0</var>
+        <var type="FLOAT" name="sigma mul">0.486</var>
+        <var type="BOOL" name="draw partitions">0</var>
+        <var type="BOOL" name="draw normals">0</var>
+        <var type="BOOL" name="Log output">0</var>
+        <var type="BOOL" name="Fancy outlines">1</var>
+        <var type="BOOL" name="Debug Layering">0</var>
+        <var type="BOOL" name="Debug Folds">0</var>
+        <var type="BOOL" name="Debug List Graph">0</var>
+        <var type="INT" name="Magic index">4</var>
+    </Params>
+    <Children/>
+</Params>

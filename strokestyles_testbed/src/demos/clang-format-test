@@ -1,0 +1,8 @@
+﻿---
+BasedOnStyle: Google
+AlignConsecutiveAssignments: 'true'
+BinPackArguments: 'true'
+BinPackParameters: 'true'
+TabWidth: '2'
+
+...

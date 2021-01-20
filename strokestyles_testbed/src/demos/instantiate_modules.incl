@@ -1,0 +1,11 @@
+modules.push_back( new InteractiveGraff() );
+modules.push_back( new FontStylizationGraffiti("Stroke Segmentation Demo") );
+modules.push_back( new FontStylizationStroke("Skeletal Stroke Export") );
+modules.push_back( new FontStylizationGraffiti() );
+modules.push_back( new FontStylizationStroke() );
+modules.push_back( new FontStylizationParticle() );
+modules.push_back( new FontStylizationSimilarity() );
+modules.push_back( new InteractiveCalligraphy() );
+
+//modules.push_back( new CurvedSkeletalTest() );
+modules.push_back( new BasicModule() );

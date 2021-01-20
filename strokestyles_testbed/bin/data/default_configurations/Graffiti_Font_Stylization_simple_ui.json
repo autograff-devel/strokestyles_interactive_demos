@@ -1,0 +1,113 @@
+[
+    {"Text Layout":
+    [
+        {"Text.text": "Input Text"},
+        {"Text.spacing": "Letter Spacing"},
+ 		{"Camera.pos x" : "X"},
+ 		{"Camera.pos y" : "Y"},
+ 		{"Camera.zoom": "Zoom"},
+        {"draw original": "Draw Original"},
+        {"original offset" : "Original Offset"}
+    ]},
+    {"_Settings":
+    [
+        {"_update every frame": "Real-time update (slow for long strings)"},
+        {"Graffiti Font Stylization.render on load" : "Render on Load"},
+        {"simplify eps": "Stroke simplification"},
+        {"straighten thresh": "Stroke straightening"}
+    ]
+    },
+    {"Schematization":
+        [
+            {"Schematization.C": "Angle quantization"},
+            {"Schematization.start angle": "Initial angle"},
+            {"Schematization.rectify struct": "Adjust incidence"},
+            {"Schematization.adjust struct": "Adjust structural relations"}
+        ]
+    },
+    {"Structural Modifiers":
+        [
+            {"Structural modifiers.free end extension": "Stroke end extension"},
+            {"Structural modifiers.extension x": "Horizontal extension"},
+            {"Structural modifiers.extension y": "Vertical extension"},
+            {"Structural modifiers.convert serifs" : "convert serifs"},
+            {"Structural modifiers.serif thresh" : "serif thresh"},
+            {"Structural modifiers.serif probability" : "serif probability"}
+        ]
+    },
+   
+    {"Stroke":
+    [
+        {"Graffiti Font Stylization.thickness": "Thickness"},
+        {"Stylization.global smoothness": "Smoothing"},
+        {"Stylization.isotropy": "Isotropy"},
+        {"Stylization.precision angle": "Bend angle"},
+        {"Stylization.force periodic": "Periodic"},
+        {"Stylization.cap smoothness": "Cap smoothness"},
+        {"_Stroke Type":[
+            {"Graffiti Font Stylization.spine type" : "spine type"},
+            {"Graffiti Font Stylization.w0" : "w0"},
+            {"Graffiti Font Stylization.w1" : "w1"},
+            {"Graffiti Font Stylization.Chisel angle" : "Chisel angle"}
+        ]},
+        {"Corners":
+            [
+                {"Trajectory generation.corner thresh": "Corner thresh"},
+                {"Trajectory generation.corner cov": "Corner smoothness"}
+            ]
+        },
+        {"Advanced":
+        [
+            {"Stylization.miter limit": "Miter limit"},
+            {"Stylization.unfold": "Remove folds"},
+            {"Stylization.Advanced.order": "Order"},
+            {"Stylization.Advanced.max displacement": "Max displacement"},
+            {"Stylization.opt x0":"Optimise initial state"},
+            {"Stylization.Advanced.subdivision" : "subdivision"},
+            {"Stylization.Advanced.subdivision" : "subsampling"}
+        ]}
+    ]},
+    {"_Layering":
+    [
+        {"Layering.active": "Active"},
+        {"Layering.fold thresh": "Folding"},
+        {"Layering.shuffle z": "Random depth ordering"},
+        {"Layering.z seed": "Random depth seed"},
+        {"Layering.disambiguate overlaps": "Disambiguate overlaps"},
+        {"Layering.all unions": "All unions"},
+        {"Advanced":
+        [
+            {"Layering.scale factor": "Scale factor"}
+        ]}
+    ]},
+    {"Fill":
+        [
+            {"Fill.palette": "Palette"},
+            {"Fill.fill seed": "Random seed"},
+            {"_Fill.geometric effects": "Show faces"},
+            {"_Fill.face alpha": "Faces alpha"},
+            {"_Fill.random offset": "Faces offset"},
+            {"_Fill.sqrt fill area thresh": "Faces min area"},
+            {"_Fill.bubble alpha": "Gradient alpha"}
+        ]},
+    {"Outline":
+    [
+        {"Outline and Shadow.line thickness": "Thickness"}
+    ]},
+    {"Highlights":
+    [
+        {"Highlights.light dir": "Light direction"},
+        {"_Highlights.highlight thickness": "Thickness"},
+        {"_Highlights.highlight alpha": "Alpha"},
+        {"Highlights.num highlights": "Num sparkles"},
+        {"H_ighlights.shine size": "Sparkles size"}
+    ]},
+    {"_Extrusion":
+    [
+        {"Extrusion.extrusion active": "Active"},
+        {"Extrusion.extrusion depth": "Depth"},
+        {"Extrusion.extrusion color": "Color"},
+        {"Extrusion.luminosity": "Luminosity"},
+        {"Extrusion.saturation": "Saturation"}
+    ]}
+]
