@@ -7,7 +7,7 @@
         <var type="BOOL" name="shift original">1</var>
         <var type="BOOL" name="transparent save">1</var>
         <var type="BOOL" name="update every frame">1</var>
-        <var type="BOOL" name="gui active">0</var>
+        <var type="FLOAT" name="outline thickness">2</var>
         <var type="BOOL" name="g_use_ref_width_adjustment">0</var>
         <var type="BOOL" name="pre_rectify_load">0</var>
         <var type="BOOL" name="pre_rectify_schematize">0</var>
@@ -28,9 +28,9 @@
         </Params>
         <Params name="Text">
             <Params>
-                <var type="STRING" name="text">MAX</var>
+                <var type="STRING" name="text">R</var>
                 <var type="FLOAT" name="spacing">0.982</var>
-                <var type="STRING" name="font name">Georgia</var>
+                <var type="STRING" name="font name">Old London</var>
             </Params>
             <Children/>
         </Params>
@@ -53,6 +53,10 @@
                 <var type="FLOAT" name="wiggle_length_thresh">0.5</var>
                 <var type="FLOAT" name="horizontal_wiggle_thresh">2</var>
                 <var type="FLOAT" name="vertical_wiggle_thresh">2</var>
+                <var type="BOOL" name="show serifs">0</var>
+                <var type="FLOAT" name="serif thresh">0.25</var>
+                <var type="BOOL" name="convert serifs">0</var>
+                <var type="FLOAT" name="serif probability">1</var>
             </Params>
             <Children/>
         </Params>
@@ -60,12 +64,13 @@
             <Params>
                 <var type="BOOL" name="planning active">1</var>
                 <var type="BOOL" name="Paul&apos;s version">1</var>
-                <var type="FLOAT" name="k_horizontal">0.1</var>
-                <var type="FLOAT" name="k_vertical">2.919</var>
-                <var type="FLOAT" name="k_vertical_abs">27.886</var>
-                <var type="FLOAT" name="k_top">7.144</var>
-                <var type="FLOAT" name="k_length">0.1</var>
-                <var type="FLOAT" name="left_weight">0.085</var>
+                <var type="FLOAT" name="Paul length weight">0</var>
+                <var type="FLOAT" name="k horizontal">0.5</var>
+                <var type="FLOAT" name="k vertical">1</var>
+                <var type="FLOAT" name="k left">1</var>
+                <var type="FLOAT" name="k top">0.7</var>
+                <var type="FLOAT" name="k length">1</var>
+                <var type="FLOAT" name="k distance">0.25</var>
             </Params>
             <Children/>
         </Params>
@@ -79,7 +84,7 @@
             <Params>
                 <var type="BOOL" name="Debug widths">0</var>
                 <var type="SELECTION" name="Stroking mode">1</var>
-                <var type="FLOAT" name="Thickness">0.925</var>
+                <var type="FLOAT" name="Thickness">0.851</var>
                 <var type="BOOL" name="Variable thickess">1</var>
                 <var type="BOOL" name="Split polylines">0</var>
                 <var type="FLOAT" name="Num traces">1</var>
@@ -87,6 +92,12 @@
                 <var type="FLOAT" name="anchor_start">0</var>
                 <var type="FLOAT" name="anchor_end">0</var>
                 <var type="INT" name="Num Strokes">0</var>
+            </Params>
+            <Children/>
+        </Params>
+        <Params name="Animation">
+            <Params>
+                <var type="FLOAT" name="stroke duration">0.8</var>
             </Params>
             <Children/>
         </Params>
@@ -105,7 +116,7 @@
                 <var type="COLOR" name="Color">0 0 0 0.564706</var>
                 <var type="FLOAT" name="Size">0.182</var>
                 <var type="FLOAT" name="Aspect ratio">0.276</var>
-                <var type="FLOAT" name="Rotation">3.297</var>
+                <var type="FLOAT" name="Rotation">3.99</var>
                 <var type="FLOAT" name="Sharpness">9.538</var>
                 <var type="FLOAT" name="Power">3.173</var>
                 <var type="FLOAT" name="Hole">0</var>
@@ -119,7 +130,7 @@
             <Params>
                 <var type="FLOAT" name="Min radius">0.141</var>
                 <var type="FLOAT" name="Max radius">1</var>
-                <var type="FLOAT" name="Sample dist">0.329</var>
+                <var type="FLOAT" name="Sample dist">0.199</var>
                 <var type="FLOAT" name="Lowpass">1</var>
                 <var type="FLOAT" name="Base speed">0.591</var>
                 <var type="BOOL" name="Vary width">0</var>
@@ -144,15 +155,15 @@
         <Params name="Trajectory generation">
             <Params>
                 <var type="BOOL" name="rectify">1</var>
-                <var type="FLOAT" name="isotropy">1</var>
-                <var type="FLOAT" name="precision angle">80.11</var>
-                <var type="FLOAT" name="global smoothness">8.655</var>
+                <var type="FLOAT" name="isotropy">0.661</var>
+                <var type="FLOAT" name="precision angle">50.69</var>
+                <var type="FLOAT" name="global smoothness">6.466</var>
                 <var type="FLOAT" name="width smoothness">3.256</var>
                 <var type="BOOL" name="opt x0">0</var>
                 <var type="FLOAT" name="activation sigma">0.239</var>
                 <var type="FLOAT" name="raidus scale">278.929</var>
                 <var type="FLOAT" name="corner cov">0.002</var>
-                <var type="FLOAT" name="corner thresh">0.354</var>
+                <var type="FLOAT" name="corner thresh">0.026</var>
                 <var type="FLOAT" name="smooth power">0.775</var>
                 <var type="FLOAT" name="miter limit">1.5</var>
                 <var type="BOOL" name="unfold">0</var>
@@ -166,7 +177,7 @@
             <Children>
                 <Params name="Advanced">
                     <Params>
-                        <var type="INT" name="order">2</var>
+                        <var type="INT" name="order">4</var>
                         <var type="INT" name="subdivision">11</var>
                         <var type="INT" name="subsampling">3</var>
                         <var type="FLOAT" name="ref spine width">0.1</var>
@@ -175,7 +186,7 @@
                         <var type="FLOAT" name="end cov scale">0.01</var>
                         <var type="FLOAT" name="force interpolation">0</var>
                         <var type="FLOAT" name="centripetal alpha">0</var>
-                        <var type="FLOAT" name="max displacement">0.423</var>
+                        <var type="FLOAT" name="max displacement">2.73</var>
                     </Params>
                     <Children/>
                 </Params>

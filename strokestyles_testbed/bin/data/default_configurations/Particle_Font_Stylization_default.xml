@@ -7,7 +7,7 @@
         <var type="BOOL" name="shift original">0</var>
         <var type="BOOL" name="transparent save">1</var>
         <var type="BOOL" name="update every frame">1</var>
-        <var type="BOOL" name="gui active">0</var>
+        <var type="FLOAT" name="outline thickness">2</var>
         <var type="BOOL" name="g_use_ref_width_adjustment">0</var>
         <var type="BOOL" name="pre_rectify_load">0</var>
         <var type="BOOL" name="pre_rectify_schematize">0</var>
@@ -28,9 +28,9 @@
         </Params>
         <Params name="Text">
             <Params>
-                <var type="STRING" name="text">PART</var>
+                <var type="STRING" name="text">R</var>
                 <var type="FLOAT" name="spacing">1</var>
-                <var type="STRING" name="font name">Adobe Bengali Bold</var>
+                <var type="STRING" name="font name">Old London</var>
             </Params>
             <Children/>
         </Params>
@@ -53,6 +53,10 @@
                 <var type="FLOAT" name="wiggle_length_thresh">0.5</var>
                 <var type="FLOAT" name="horizontal_wiggle_thresh">2</var>
                 <var type="FLOAT" name="vertical_wiggle_thresh">2</var>
+                <var type="BOOL" name="show serifs">0</var>
+                <var type="FLOAT" name="serif thresh">0.25</var>
+                <var type="BOOL" name="convert serifs">0</var>
+                <var type="FLOAT" name="serif probability">1</var>
             </Params>
             <Children/>
         </Params>
@@ -60,12 +64,13 @@
             <Params>
                 <var type="BOOL" name="planning active">0</var>
                 <var type="BOOL" name="Paul&apos;s version">1</var>
-                <var type="FLOAT" name="k_horizontal">2</var>
-                <var type="FLOAT" name="k_vertical">1</var>
-                <var type="FLOAT" name="k_vertical_abs">2</var>
-                <var type="FLOAT" name="k_top">3</var>
-                <var type="FLOAT" name="k_length">3</var>
-                <var type="FLOAT" name="left_weight">0.1</var>
+                <var type="FLOAT" name="Paul length weight">0</var>
+                <var type="FLOAT" name="k horizontal">0.5</var>
+                <var type="FLOAT" name="k vertical">1</var>
+                <var type="FLOAT" name="k left">1</var>
+                <var type="FLOAT" name="k top">0.7</var>
+                <var type="FLOAT" name="k length">1</var>
+                <var type="FLOAT" name="k distance">0.25</var>
             </Params>
             <Children/>
         </Params>
@@ -78,20 +83,21 @@
         <Params name="Particle Font Stylization">
             <Params>
                 <var type="FLOAT" name="num_particles">115.746</var>
-                <var type="FLOAT" name="kp">254.972</var>
+                <var type="BOOL" name="also opposite">1</var>
+                <var type="FLOAT" name="kp">168.103</var>
                 <var type="FLOAT" name="damping_ratio">0.215</var>
                 <var type="FLOAT" name="num_iterations">1</var>
                 <var type="FLOAT" name="steps_per_second">415.746</var>
                 <var type="FLOAT" name="spawn_interval">6.528</var>
-                <var type="FLOAT" name="rotational_force">1519.34</var>
-                <var type="FLOAT" name="random_radial_force">4723.76</var>
-                <var type="FLOAT" name="rand_start">0</var>
+                <var type="FLOAT" name="rotational_force">890.805</var>
+                <var type="FLOAT" name="random_radial_force">431.034</var>
+                <var type="FLOAT" name="rand_start">25.431</var>
                 <var type="FLOAT" name="rot_speed">-26.519</var>
-                <var type="FLOAT" name="fade">0.033</var>
-                <var type="FLOAT" name="psize">17.882</var>
-                <var type="COLOR" name="p color">0.184314 0.184314 0.184314 0.258824</var>
+                <var type="FLOAT" name="fade">0.003</var>
+                <var type="FLOAT" name="psize">9.134</var>
+                <var type="COLOR" name="p color">0.0930232 0.00735533 0.00735533 0.258824</var>
                 <var type="FLOAT" name="centripetal_alpha">1</var>
-                <var type="FLOAT" name="speed">177.486</var>
+                <var type="FLOAT" name="speed">458.534</var>
             </Params>
             <Children/>
         </Params>

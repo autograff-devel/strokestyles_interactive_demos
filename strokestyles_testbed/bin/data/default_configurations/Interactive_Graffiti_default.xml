@@ -31,8 +31,9 @@
                     <Params>
                         <var type="FLOAT" name="radius scale">279.59</var>
                         <var type="FLOAT" name="corner cov">0</var>
-                        <var type="FLOAT" name="corner thresh">3.852</var>
+                        <var type="FLOAT" name="corner thresh">0.01</var>
                         <var type="FLOAT" name="smooth power">1.044</var>
+                        <var type="BOOL" name="unfold">0</var>
                     </Params>
                     <Children/>
                 </Params>
@@ -40,7 +41,7 @@
                     <Params>
                         <var type="INT" name="order">2</var>
                         <var type="INT" name="subdivision">4</var>
-                        <var type="INT" name="subsampling">2</var>
+                        <var type="INT" name="subsampling">6</var>
                         <var type="INT" name="polygon split">4</var>
                         <var type="INT" name="period">2</var>
                         <var type="FLOAT" name="spine offset amt">0.5</var>
@@ -80,13 +81,14 @@
                 <var type="FLOAT" name="fill seed">213.855</var>
                 <var type="BOOL" name="geometric effects">1</var>
                 <var type="FLOAT" name="random offset">44.034</var>
+                <var type="FLOAT" name="shape offset amount">0</var>
                 <var type="FLOAT" name="face alpha">0.25</var>
                 <var type="COLOR" name="fill color">1 1 1 1</var>
                 <var type="FLOAT" name="sqrt fill area thresh">21.307</var>
                 <var type="FLOAT" name="num bubbles">70</var>
                 <var type="FLOAT" name="bubble alpha">0.639</var>
                 <var type="FLOAT" name="bubble radius">600</var>
-                <var type="SELECTION" name="palette">38</var>
+                <var type="SELECTION" name="palette">6</var>
             </Params>
             <Children/>
         </Params>
@@ -129,21 +131,26 @@
         <Params name="Background">
             <Params>
                 <var type="COLOR" name="background color">1 0.99999 0.99999 1</var>
-                <var type="FLOAT" name="background seed">5</var>
-                <var type="BOOL" name="drips active">0</var>
-                <var type="BOOL" name="auto bubble color">0</var>
-                <var type="COLOR" name="bubble color 1">1 0.6 0 1</var>
-                <var type="COLOR" name="bubble color 2">1 0 0 1</var>
-                <var type="FLOAT" name="bubble hue offset">0</var>
-                <var type="FLOAT" name="drip variance">0.3</var>
-                <var type="FLOAT" name="num verices">20</var>
-                <var type="FLOAT" name="fuzzyness">0.5</var>
-                <var type="FLOAT" name="drip length">100</var>
-                <var type="FLOAT" name="drip angle offset">0</var>
-                <var type="INT" name="num offset steps">3</var>
-                <var type="FLOAT" name="shape offset amt">100</var>
             </Params>
-            <Children/>
+            <Children>
+                <Params name="Background shape">
+                    <Params>
+                        <var type="FLOAT" name="background seed">5</var>
+                        <var type="BOOL" name="drips active">0</var>
+                        <var type="BOOL" name="auto bubble color">1</var>
+                        <var type="COLOR" name="bubble color">1 0 0 1</var>
+                        <var type="FLOAT" name="bubble hue offset">0</var>
+                        <var type="FLOAT" name="drip variance">0.3</var>
+                        <var type="FLOAT" name="num verices">20</var>
+                        <var type="FLOAT" name="fuzzyness">0.5</var>
+                        <var type="FLOAT" name="drip length">100</var>
+                        <var type="FLOAT" name="drip angle offset">0</var>
+                        <var type="INT" name="num offset steps">3</var>
+                        <var type="FLOAT" name="shape offset amt">100</var>
+                    </Params>
+                    <Children/>
+                </Params>
+            </Children>
         </Params>
     </Children>
 </Params>
