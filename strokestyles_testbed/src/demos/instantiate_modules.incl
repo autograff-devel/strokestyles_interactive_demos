@@ -1,5 +1,5 @@
-modules.push_back( new LQTBezierDemo() );
 modules.push_back( new LQTSemitiedDemo() );
+modules.push_back( new LQTBezierDemo() );
 modules.push_back( new InteractiveGraff() );
 modules.push_back( new FontStylizationGraffiti("Stroke Segmentation Demo") );
 modules.push_back( new FontStylizationStroke("Skeletal Stroke Export") );
