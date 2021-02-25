@@ -6,3 +6,5 @@
 #include "demos/font_stylization_stroke.h"
 #include "demos/interactive_calligraphy.h"
 #include "demos/interactive_graff.h"
+#include "demos/lqt_bezier_demo.h"
+#include "demos/lqt_semitied_demo.h"
