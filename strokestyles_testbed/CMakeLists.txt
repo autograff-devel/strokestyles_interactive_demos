@@ -154,6 +154,7 @@ add_executable(strokestyles_testbed
     ${CAUTOGRAFF_DIR}/src/geom/ag_sweepline_intersections.cpp
     ${CAUTOGRAFF_DIR}/src/geom/ag_alpha_shape.cpp
     ${CAUTOGRAFF_DIR}/src/geom/ag_alpha_shape.cpp
+    ${CAUTOGRAFF_DIR}/src/geom/ag_lqt_helpers.cpp
 
 
     # - graffiti
