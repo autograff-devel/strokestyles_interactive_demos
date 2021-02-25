@@ -118,7 +118,7 @@ public:
         
         // can access it with params.getFloat("foo")
         gui_params.loadXml(configuration_path(this, ".xml"));
-        ctr_maker.load(configuration_path(this, ".csv")); 
+        ctr_maker.load(configuration_path(this, "_ctr.json")); 
         
         load_flesh();
     }
@@ -140,7 +140,7 @@ public:
     void exit()
     {
         gui_params.saveXml(configuration_path(this, ".xml"));
-        ctr_maker.save(configuration_path(this, ".csv")); 
+        ctr_maker.save(configuration_path(this, "_ctr.json")); 
     }
     
     
@@ -414,7 +414,7 @@ public:
         if(m<2)
             return;
         
-        SketchResult res = sketch_lqt(Polyline(ctr_maker.pts.points, false), softie_params, false);
+        SketchResult res = sketch_lqt(ctr_maker.pts, softie_params, false);
         
         mat traj = res.traj;
         mat T = res.X.rows(2, 3);

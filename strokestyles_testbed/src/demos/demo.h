@@ -204,7 +204,7 @@ class Demo : public AppModule {
   void simple_or_normal_gui() {
     if (ImGui::BeginTabBar("UiTabBar", ImGuiTabBarFlags_None)) {
       ///
-      if (ImGui::BeginTabItem("Simple UI")) {
+      if (use_simple_ui && ImGui::BeginTabItem("Simple UI")) {
         ImGui::BeginChild("SimpleParamUI");
         simple_ui.ui(ui_json);
         ImGui::EndChild();

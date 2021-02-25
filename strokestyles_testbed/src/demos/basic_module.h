@@ -29,7 +29,7 @@ public:
         params.addInt("count", &gui_params.count)->describe("An integer paramter");
         
         params.loadXml(this->filename() + ".xml");
-        ctrMaker.load(this->filename() + ".csv");
+        ctrMaker.load(this->filename() + "_ctr.json");
     }
     
     bool init()
@@ -40,7 +40,7 @@ public:
     void exit()
     {
         params.saveXml(this->filename() + ".xml");
-        ctrMaker.save(this->filename() + ".csv");
+        ctrMaker.save(this->filename() + "_ctr.json");
     }
     
     bool gui()

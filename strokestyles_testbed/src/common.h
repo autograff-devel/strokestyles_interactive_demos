@@ -101,16 +101,16 @@ class PaletteManager {
 
 class ContourMaker {
  public:
-  Contour pts;
+  ag::Polyline pts;
   int     selected = -1;
 
-  ContourMaker() { pts = Contour(); }
+  ContourMaker() { pts = ag::Polyline(); }
 
   void interactDrag() {}
 
   void interactDraw() {
     if (Mouse::clicked(0)) {
-      pts.addPoint(Mouse::pos());
+      pts.add(Mouse::pos());
     }
   }
 
@@ -118,7 +118,7 @@ class ContourMaker {
     if (Mouse::clicked(0)) selected = -1;
 
     for (int i = 0; i < pts.size(); i++) {
-      pts.set(i, ui::dragger(i, pts[i]));
+      pts[i] = ui::dragger(i, pts[i]);
       if (ui::modified()) selected = i;
     }
 
@@ -134,14 +134,26 @@ class ContourMaker {
     }
   }
 
-  void draw(bool closed = false) { gfx::draw(pts.points, closed); }
+  void draw(bool closed = false) { gfx::draw(pts); }
 
-  void save(const std::string& path) { pts.save(path); }
+  void save(const std::string& path) 
+  { 
+    if (pts.size())
+      ag::json_to_file(ag::polyline_to_json(pts), path);
+  }
 
-  void load(const std::string& path) { pts.load(path); }
+  void load(const std::string& path) 
+  { 
+    if (!ag::file_exists(path))
+    {
+      std::cout << path << " does not exist!\n";
+      return;
+    }
+    pts = ag::json_to_polyline(ag::json_from_file(path)); 
+  }
 
   void clear() {
-    pts      = Contour();
+    pts      = ag::Polyline();
     selected = -1;
   }
 };
