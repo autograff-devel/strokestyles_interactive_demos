@@ -110,7 +110,7 @@ class FontStylizationBase : public Demo {
   mat                        view, centerm;
   double                     view_scale = 1;  // Scale factor for viewing transform
 
-  bool is_stroke_based;  // <- If false functionalities such as schematization
+  bool is_stroke_based = true;  // <- If false functionalities such as schematization
                          // are not required
   bool shift_original = true;
 
@@ -233,6 +233,7 @@ class FontStylizationBase : public Demo {
 		param_modified << gui_params.addFloat("vertical_wiggle_thresh", &string_params.vertical_wiggle_thresh, -2.0, 2.0);
 
 		param_modified << gui_params.addBool("show serifs", &params.show_serifs);
+        param_modified << gui_params.addBool("stroke serifs", &string_params.stroked_serifs);
 		param_modified << gui_params.addFloat("serif thresh", &string_params.serif_thresh, 0.0, 20.)
 			->describe("< ratio between serif length and incident stroke width"); // ratio between end width
 		param_modified << gui_params.addBool("convert serifs", &string_params.convert_serifs);
@@ -242,8 +243,9 @@ class FontStylizationBase : public Demo {
 		// gui_params.addFloat("wiggle_width", &string_params.wiggle_width,
 		// -3., 3.0); param_modified << gui_params.addFloat("wiggle_cross",
 		// &string_params.wiggle_cross, 0.1, 3); param_modified <<
-		// gui_params.addFloat("wiggle_radius", &string_params.wiggle_radius, 0.001,
-		// 200); param_modified << gui_params.addFloat("wiggle_initial_thickness",
+		gui_params.addFloat("wiggle_radius", &string_params.wiggle_radius, 0.001, 200);
+  
+  //  param_modified << gui_params.addFloat("wiggle_initial_thickness",
 		// &string_params.wiggle_initial_thickness, 0.05, 2.);
 
 		gui_params.newChild("Planning")->appendOption("hidden");
@@ -620,7 +622,9 @@ class FontStylizationBase : public Demo {
 
     std::string name = db.font_names[params.font_index];
 
-    if (is_stroke_based) {
+    if (this->is_stroke_based) { 
+      //
+      
       if (editor.strokes.size())
         editor.generate_chunks(skel_params, render_data);
       editor.update_widths();

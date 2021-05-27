@@ -93,7 +93,7 @@ class FontStylizationStroke : public FontStylizationBase {
   }
 
   FontStylizationStroke(const std::string& name = "Stroke Font Stylization")
-      : FontStylizationBase(name, "./data/presets/stylization_stroke") {
+      : FontStylizationBase(name, "./data/presets/stylization_stroke", true) {
     std::vector<std::string> modes = {"Trace", "Brush", "Tube"};  //"Skeletal",
 
     // clang-format off
@@ -581,10 +581,10 @@ class FontStylizationStroke : public FontStylizationBase {
       processed_glyph_infos.clear();
 
       for (int i = 0; i < str.size(); i++) {
-        gfx::pushMatrix(str[i].tm);
+        //gfx::pushMatrix(str[i].tm);
         processed_glyph_infos.push_back(
             process_glyph_instance(str[i], render_data, &stroke_widths));
-        gfx::popMatrix();
+        //gfx::popMatrix();
       }
       vertex_widths.clear();
       handwritten_strokes.clear();

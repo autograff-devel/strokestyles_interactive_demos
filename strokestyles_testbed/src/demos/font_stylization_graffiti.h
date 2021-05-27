@@ -111,15 +111,15 @@ class FontStylizationGraffiti : public FontStylizationBase {
 
   ArrowHeadParams arrow_params;
 
-  std::vector<segment> highlighted_segments;
-  lines::Buffer        outline_buf;
-  lines::Buffer        highlight_buf;
-  Mesh                 whole_mesh;
-  Mesh                 whole_buffered_mesh;
-  PolylineList         extrusion;
+  std::vector<segment>  highlighted_segments;
+  lines::Buffer         outline_buf;
+  lines::Buffer         highlight_buf;
+  Mesh                  whole_mesh;
+  Mesh                  whole_buffered_mesh;
+  PolylineList          extrusion;
   std::vector<Polyline> fill_faces;
-  std::vector<Mesh> fill_meshes;
-  std::vector<vec> face_offsets;
+  std::vector<Mesh>     fill_meshes;
+  std::vector<vec>      face_offsets;
 
   cm::ParamModifiedTracker outl_param_modified;
 
@@ -423,20 +423,20 @@ class FontStylizationGraffiti : public FontStylizationBase {
     outline_modified << gui_params.addFloat("fill seed", &fill_params.seed, 1, 1000);
     outline_modified << gui_params.addBool("geometric effects", &fill_params.fill_planar);
     outline_modified << gui_params.addFloat("random offset",
-                        &fill_params.rand_face_offset,
-                        0.,
-                        500);
+                                            &fill_params.rand_face_offset,
+                                            0.,
+                                            500);
     outline_modified << gui_params.addFloat("shape offset amount",
-                        &fill_params.shape_offset_amt,
-                        0.,
-                        100);
+                                            &fill_params.shape_offset_amt,
+                                            0.,
+                                            100);
 
     gui_params.addFloat("face alpha", &fill_params.effect_alpha, 0.0, 1.);
     gui_params.addColor("fill color", &fill_params.color);
     outline_modified << gui_params.addFloat("sqrt fill area thresh",
-                        &fill_params.fill_area_thresh,
-                        0.0,
-                        500.);
+                                            &fill_params.fill_area_thresh,
+                                            0.0,
+                                            500.);
 
     gui_params.addFloat("num bubbles", &fill_params.num_bubbles, 0.0, 100);
     gui_params.addFloat("bubble alpha", &fill_params.bubble_alpha, 0.0, 1);
@@ -575,6 +575,7 @@ class FontStylizationGraffiti : public FontStylizationBase {
   }
 
   void mode_render(bool needs_update) {
+    gfx::enableAntiAliasing(true);
     // make sure subdivision is always > 1
     if (render_data.softie_params.subdivision <= 2)
       render_data.softie_params.subdivision = 2;
@@ -645,7 +646,10 @@ class FontStylizationGraffiti : public FontStylizationBase {
     }
 
     if (!params.debug_draw && layering.whole.size()) {
-      do_fancy_stuff();
+      if (gfx::isRenderingToEps())
+        do_fancy_stuff_save();
+      else
+        do_fancy_stuff();
     }
   }
 
@@ -667,6 +671,45 @@ class FontStylizationGraffiti : public FontStylizationBase {
     img.draw(pos[0] - radius * 0.5, pos[1] - radius * 0.5, radius, radius);
   }
 
+  void do_fancy_stuff_save() {
+    PolylineList whole_shape = shape_offset(
+    shape_offset(layering.whole, tracing_params.min_outline_size / 2),
+    -tracing_params.min_outline_size / 2);
+    if (extrusion_params.thicken > 0.)
+      whole_shape = shape_offset(whole_shape, extrusion_params.thicken, ag::JOIN_ROUND);
+        
+    gfx::color(outline_params.color);
+    gfx::fill(whole_shape);  //was fill whole_shape);
+    
+    if (extrusion_params.active) {
+      
+      for (const Polyline& P : reversed(extrusion)) {
+        vec clr = ag::Color::mul_saturation(extrusion_params.color,
+                                            extrusion_params.saturation);
+        clr     = ag::Color::mul_luminance(clr, extrusion_params.luminosity);
+
+        gfx::color(clr);
+        gfx::fill(P);
+        gfx::color(outline_params.color);
+        gfx::draw(P);
+      }
+    }
+    
+    vec clr = (vec)fill_params.color;
+    gfx::color(clr);
+    gfx::fill(layering.whole);
+    
+    // outline
+    gfx::color(outline_params.color);
+    set_line_width(outline_params.thickness);
+    for (int i = 0; i < layering.visible_outlines.size(); i++) {
+      gfx::draw(layering.visible_outlines[i]);
+    }
+    
+    gfx::draw(layering.whole);
+    //gfx::lineWidth(1.);
+  }
+  
   void do_fancy_stuff() {
     if (!layering.whole.size()) return;
 
@@ -859,8 +902,7 @@ class FontStylizationGraffiti : public FontStylizationBase {
       int  c   = 0;
       ivec rnd = prev_rand;
 
-      if (outl_dirty)
-      {
+      if (outl_dirty) {
         fill_faces.clear();
         fill_meshes.clear();
         face_offsets.clear();
@@ -871,20 +913,19 @@ class FontStylizationGraffiti : public FontStylizationBase {
 
           {
             double r = 0.;  // params.rotation;
-            
+
             face_offsets.push_back((random::uniform(2) - 0.5) *
-                          fill_params.rand_face_offset);
+                                   fill_params.rand_face_offset);
             Polyline P = layering.interior_faces
-                            [i];  // cleanup_polyline(layering.interior_faces[i],
-                                  // true, 0.5);
+                             [i];  // cleanup_polyline(layering.interior_faces[i],
+                                   // true, 0.5);
             PolylineList S = {P};  // layering.interior_faces[i]};
             c++;
             float o = random::uniform() * fill_params.shape_offset_amt;
             if (o > 0) S = shape_offset(S, -o);
             fill_faces.push_back(layering.interior_faces[i]);
             fill_meshes.push_back(gfx::tessellate(S));
-            
-            
+
             count++;
           }
           auto v = random::randint();  // random::uniform();
@@ -892,41 +933,40 @@ class FontStylizationGraffiti : public FontStylizationBase {
           // std::cout << v << ",";
         }
       }
-      
-      for (int i = 0; i < fill_faces.size(); i++)
-      {
+
+      for (int i = 0; i < fill_faces.size(); i++) {
         //
         vec clr = palette.color(i, fill_params.effect_alpha);
-          gfx::color(clr);  // random(0.3)); //random::uniform(), 0.5);
-                              // //5);//gfx::defaultColor(i, 0.5));
-            gfx::pushMatrix();
-            //
-            //                    gfx::translate(cenp);
-            //                    gfx::rotate(r);//params.rotation);
-            //                    gfx::translate(-cenp);
-            gfx::translate(face_offsets[i]);
+        gfx::color(clr);  // random(0.3)); //random::uniform(), 0.5);
+                          // //5);//gfx::defaultColor(i, 0.5));
+        gfx::pushMatrix();
+        //
+        //                    gfx::translate(cenp);
+        //                    gfx::rotate(r);//params.rotation);
+        //                    gfx::translate(-cenp);
+        gfx::translate(face_offsets[i]);
 
-            gfx::draw(fill_meshes[i]);
-            // diff(layering.interior_faces[i].mat(), 1, 1).print();
-            //                    for (int j = 0; j < S[0].size(); j++)
-            //                    {
-            //                        printf("%.2f %.2f, ", S[0][j](0),
-            //                        S[0][j](1));
-            //                    }
-            //                    printf("\n");
-            // S[0].mat().print();
-            // gfx::lineWidth(2.);
-            gfx::translate((random::uniform(2) - 0.5) *
-                          fill_params.rand_face_offset);
-            set_line_width(0.25 + random::uniform() * 2);
+        gfx::draw(fill_meshes[i]);
+        // diff(layering.interior_faces[i].mat(), 1, 1).print();
+        //                    for (int j = 0; j < S[0].size(); j++)
+        //                    {
+        //                        printf("%.2f %.2f, ", S[0][j](0),
+        //                        S[0][j](1));
+        //                    }
+        //                    printf("\n");
+        // S[0].mat().print();
+        // gfx::lineWidth(2.);
+        gfx::translate((random::uniform(2) - 0.5) *
+                       fill_params.rand_face_offset);
+        set_line_width(0.25 + random::uniform() * 2);
 
-            clr = palette.color(i * 3, fill_params.effect_alpha);
-            gfx::color(clr);  // ag::Color::mul_luminance(clr, 0.5));
-            gfx::draw(fill_faces[i]);//layering.interior_faces[i], true);
-            gfx::lineWidth(1.);
-            //
-            //
-            gfx::popMatrix();
+        clr = palette.color(i * 3, fill_params.effect_alpha);
+        gfx::color(clr);           // ag::Color::mul_luminance(clr, 0.5));
+        gfx::draw(fill_faces[i]);  //layering.interior_faces[i], true);
+        gfx::lineWidth(1.);
+        //
+        //
+        gfx::popMatrix();
       }
       gfx::endMasked();
     }
@@ -939,8 +979,8 @@ class FontStylizationGraffiti : public FontStylizationBase {
     gfx::color(1, outline_params.highlight_alpha);
     //
     gfx::pushMatrix();
-    gfx::translate(ldir(0) * outline_params.thickness, //* 0.5,
-                   ldir(1) * outline_params.thickness);// * 0.5);
+    gfx::translate(ldir(0) * outline_params.thickness,   //* 0.5,
+                   ldir(1) * outline_params.thickness);  // * 0.5);
 
     if (global_debug.fancy_outlines) {
       if (outl_dirty) {

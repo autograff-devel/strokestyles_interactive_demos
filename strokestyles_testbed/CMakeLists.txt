@@ -56,13 +56,14 @@ find_package(OpenGL REQUIRED)
 add_definitions(-g)
 add_definitions(-DGL_SILENCE_DEPRECATION)
 #add_definitions(-std=gnu++14)
-if(EXISTS "${PROJECT_SOURCE_DIR}/src/strokestyles_prototypes")
+set(PROTOTYPE_DIR ${PROJECT_SOURCE_DIR}/src/strokestyles_prototypes)
+if(EXISTS ${PROTOTYPE_DIR}) #"${PROJECT_SOURCE_DIR}/src/strokestyles_prototypes")
    message("src/strokestyles_prototypes folder exists: adding definitions")
    add_definitions(-DINCLUDE_PROTOTYPES)
-
-#    include_directories(
-#         ${PROJECT_NAME}/src/strokestyles_prototypes/deps
-#    )
+   # add_subdirectory(src/strokestyles_prototypes)
+   include_directories(
+        ${PROTOTYPE_DIR}
+   )
 else()
     message("src/strokestyles_prototypes folder does not exist")
 endif()
@@ -232,7 +233,7 @@ target_link_libraries(strokestyles_testbed
     boost_filesystem
     )
 
-if(EXISTS "${PROJECT_SOURCE_DIR}/src/strokestyles_prototypes")
+if(EXISTS ${PROTOTYPE_DIR}) #"${PROJECT_SOURCE_DIR}/src/strokestyles_prototypes")
 include(${PROJECT_SOURCE_DIR}/src/strokestyles_prototypes/dependencies.cmake)
 endif()
 
