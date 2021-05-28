@@ -1,0 +1,1259 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		12B4DE421EA24D6884F962CD /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 75013A035323432798BAA13A /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				7B529861BFDF4F02AD2A043F /* CMake Rules */,
+			);
+			dependencies = (
+				0A5B1A371DBC460BBCE13CB4 /* PBXTargetDependency */,
+				921360D333B542E2A3C087AC /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
+		9F089FAB3D1243FA8A38C180 /* ZERO_CHECK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 7D1A2F6833A342C9A502752D /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildPhases = (
+				4BE18B5EF76A4D4D8E8A49E4 /* CMake Rules */,
+			);
+			dependencies = (
+			);
+			name = ZERO_CHECK;
+			productName = ZERO_CHECK;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		0165432263B54769843AD2C9 /* cm_utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DE6E5C3EE21E4416A309128A /* cm_utils.cpp */; };
+		0391ED40999F4A35ADCDF144 /* font_stylization_base.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 855F41A32CEE46B7AB1586B9 /* font_stylization_base.cpp */; };
+		08F8E62CAF95484E8F552650 /* ag_color.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3B8D65C8283E478FABBCAA1D /* ag_color.cpp */; };
+		0B1547C08F894DEBB63A8FE2 /* imgui_widgets.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B8B0AF4A4EC54D7B8E48434B /* imgui_widgets.cpp */; };
+		0BF79AD7538F4E718C79F97A /* ag_dynamic_spline.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63EB08A6820A4F9799311B01 /* ag_dynamic_spline.cpp */; };
+		0F80F4CCFD1E49C79F7B77FB /* ag_numeric.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 755A55F0108F484F9A5CD3FB /* ag_numeric.cpp */; };
+		0FBA00E4BB0A484E9A261248 /* Hungarian.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 281E285FFEFA4504BEB0D5C1 /* Hungarian.cpp */; };
+		11E19EA2E9444FDDAF82078C /* imgui_demo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B71C06545481418C91133F45 /* imgui_demo.cpp */; };
+		120A4178E8974859B106FF37 /* ag_svg.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1663904CFFB408A8B346F42 /* ag_svg.cpp */; };
+		1253CF96C39E4E71B89CC1B7 /* ase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7F19E17250E44953A097EFB1 /* ase.cpp */; };
+		16B9684FB23845068841C672 /* EMG.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CCCB839D9CE438582D8ECE9 /* EMG.cpp */; };
+		20091E96BC57472C88562813 /* geom.c in Sources */ = {isa = PBXBuildFile; fileRef = E5E7BC5A3C72423EB113AA86 /* geom.c */; };
+		249FB31406624722A1AB456B /* io.c in Sources */ = {isa = PBXBuildFile; fileRef = FE29B4D57EC04860B336FE97 /* io.c */; };
+		2769F3DD175F4BAC977D635F /* ag_schematize.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B4585583950948D590FF70F3 /* ag_schematize.cpp */; };
+		2AA79DC73C9D422890478130 /* cm_imgui_app.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4A09F95C927146218977E950 /* cm_imgui_app.cpp */; };
+		2B8B1CE2B97D4F74A35EE5D5 /* ag_json.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B8A69AF2AC6B48B1AB9A3923 /* ag_json.cpp */; };
+		2B91D5A9FA0044E0B7DFC731 /* polypartition.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C03DB5A02AE4085A609CEAC /* polypartition.cpp */; };
+		2BEA6775B20349E8A019E5AD /* ag_skeletal_strokes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C20557B5416A43679A93F6F3 /* ag_skeletal_strokes.cpp */; };
+		2CB89985307D407796FCA36C /* ag_layering_data.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 773BE8EBD7164669B8F78941 /* ag_layering_data.cpp */; };
+		2D9E07A2F91D4B089BD890D8 /* ag_layering.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F778D0143B53401A8FC36A6D /* ag_layering.cpp */; };
+		30238D4E12DF4BAF853ED32C /* userprintf.c in Sources */ = {isa = PBXBuildFile; fileRef = 94EE59E54FBB4EA087ACE661 /* userprintf.c */; };
+		3E89DC744F084B3190AC6835 /* cm_gfx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D1C13C105D4140289EC025C1 /* cm_gfx.cpp */; };
+		412B5BADF7B5423FA5014E76 /* merge.c in Sources */ = {isa = PBXBuildFile; fileRef = 091944CD659B47188E3622A4 /* merge.c */; };
+		423F18D529DF46F6A6CC58C6 /* ag_utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E22F8F9A5F99428CB390B3DE /* ag_utils.cpp */; };
+		43F580F2AECD402EB3F5EC70 /* cm_vector_export.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2D5B46D5B3E24C7ABEA9ECF9 /* cm_vector_export.cpp */; };
+		4924A9033A5B43979FD9ED0D /* fitCurves.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46EB7FE2360C4930B331E9D2 /* fitCurves.cpp */; };
+		4F026AF20D6949C7AD37A4E0 /* gfx_ui.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A0B83A7D2360428DB7143FC8 /* gfx_ui.cpp */; };
+		561BF946D6184E0C861BF402 /* cm_utils_osx.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E5E48481C054EE495D8FB68 /* cm_utils_osx.mm */; };
+		57BA6D4AE0A1478EAD60B778 /* ag_graff_primitives.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5507F0E7A52F4BDDA7C8E2B8 /* ag_graff_primitives.cpp */; };
+		587DDAE2E04C478EB1F8D5FC /* qset.c in Sources */ = {isa = PBXBuildFile; fileRef = 83FCC474EAF1485E88313B78 /* qset.c */; };
+		592D029B804D419DAC932864 /* ag_colormotor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FFA01CD6EB374318A8404EE9 /* ag_colormotor.cpp */; };
+		5C372B7C507E4CF089FC838C /* cm_params.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57BAD93202854D598AF6C907 /* cm_params.cpp */; };
+		5E1F5BAA707A4738B20651F2 /* ciecam02.c in Sources */ = {isa = PBXBuildFile; fileRef = ECA4480DAABF42FAA9E88273 /* ciecam02.c */; };
+		5E969EBF00FC4A558AEA4668 /* random.c in Sources */ = {isa = PBXBuildFile; fileRef = 46BB630C83C443C38CE32861 /* random.c */; };
+		5FAE84DABAEE4D07BC8174F6 /* stat.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BE87FF7E07444DCA6B9E263 /* stat.c */; };
+		64DB71C36E3045F8869C0D00 /* clipper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1EBE31516EE24966BC7698CC /* clipper.cpp */; };
+		6FD45B7C08894A3088F45491 /* libqhull.c in Sources */ = {isa = PBXBuildFile; fileRef = F2E75E2AD5A74BEC96F69A1A /* libqhull.c */; };
+		73532E4F8D5D4ABAB595F601 /* global.c in Sources */ = {isa = PBXBuildFile; fileRef = E9FEB413E4D9486089CBED53 /* global.c */; };
+		75301A7818D849D0A0FD6024 /* userprintf_rbox.c in Sources */ = {isa = PBXBuildFile; fileRef = 557005B1DAAE4DE1B5A6AA07 /* userprintf_rbox.c */; };
+		796769ABAA8F4395B6AD530C /* tangent_cover.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 868885CC63EA4DA682CD2C3E /* tangent_cover.cpp */; };
+		86ADA56539D84F23959FBC7D /* hist_cost.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6F96161565BF4CE48E80FC2C /* hist_cost.cpp */; };
+		900B8476A37C4BEF8E2CF5B2 /* sc_compute.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1BA495D5F5204F18A64FFD25 /* sc_compute.cpp */; };
+		9013391215C044C79F52C6D6 /* imgui.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A8C6D5C2AE084B9F917E732B /* imgui.cpp */; };
+		9915E950BD4A493EBC8141E1 /* ag_graff_font.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C554197AEC1444E789C6DCEC /* ag_graff_font.cpp */; };
+		995D010EEE124A399DE21366 /* rboxlib.c in Sources */ = {isa = PBXBuildFile; fileRef = 07D271122C7341CE91983103 /* rboxlib.c */; };
+		9B4CE28FA5EC47CB8C4E07D2 /* usermem.c in Sources */ = {isa = PBXBuildFile; fileRef = 05F3A25FD0DA4BBF8F05EB10 /* usermem.c */; };
+		A44394DBD3FB44D297BFAD4C /* tinyutf8.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 226825CFD8ED4946849E1079 /* tinyutf8.cpp */; };
+		A4F58170CAB741248FD72962 /* cm_imgui.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C8419E131F8D4D35A2048E14 /* cm_imgui.cpp */; };
+		AA2732E2B25A4A1BB3A48114 /* imgui_draw.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 94813631BCB7474292B8FC8E /* imgui_draw.cpp */; };
+		ABE801B1EDAD4DA590E4C364 /* mem.c in Sources */ = {isa = PBXBuildFile; fileRef = 850AA8D3DEB1447D9AC42FA1 /* mem.c */; };
+		B20F1AEFCA7F4991B820B1AE /* geom2.c in Sources */ = {isa = PBXBuildFile; fileRef = A9D7BBBB0F7D49569E617E7C /* geom2.c */; };
+		B4938CB391AF458EAFD1090E /* ag_turtle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E5174B6F3D3D414489B566B6 /* ag_turtle.cpp */; };
+		B6AEF33BB2374CF4BA06AC49 /* ag_random.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 61D4A3422DB0448AB71C0308 /* ag_random.cpp */; };
+		BA07231F9FC648B29066587D /* tinysplinecpp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 558CACDD419547F882324325 /* tinysplinecpp.cpp */; };
+		BA56A03E7FB449F0BE0B0AD4 /* clipper_triangulation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2B18D27C98CD4399BEFF30EC /* clipper_triangulation.cpp */; };
+		BB1C49C43E304652BB3157D8 /* cm_math.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C048ADE2BF6D4D47AA91853F /* cm_math.cpp */; };
+		C066496C62A44E1EAFBD9D5B /* poly.c in Sources */ = {isa = PBXBuildFile; fileRef = 184832976FDD451A966BEC20 /* poly.c */; };
+		C1F72DB5D5C74E11A140E908 /* spectrum.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7763ED708E2B4EE4BA628A16 /* spectrum.cpp */; };
+		C4F88F2CD85E469EACD61393 /* autograff.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E17469BF38324858930AAFFD /* autograff.cpp */; };
+		C9B40B8C025E492EB8932F55 /* representation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AF9E3F5716164826917CF331 /* representation.cpp */; };
+		D0D5395955464B59B9AB1692 /* clipper_offset.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FFC7CEBA4AB144CF883147E1 /* clipper_offset.cpp */; };
+		D2A202440E6247958D085F9D /* ag_geom.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AF043E0A6B324FCA90780162 /* ag_geom.cpp */; };
+		DB3DB8B59FBC41C5924EC291 /* ag_lqt.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 25CB51828D954C33B06C0705 /* ag_lqt.cpp */; };
+		DD8E114A5DBC431C9526306C /* common.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2C7369DFAEA246E8B1D96FA7 /* common.cpp */; };
+		DFB6F7909565457FB855F916 /* ag_planar_map.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DA065204DD034F4E85909D62 /* ag_planar_map.cpp */; };
+		E225F9AFF78A46038D2AF02F /* ag_clothoid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53DC5B75A65D451B82F1B781 /* ag_clothoid.cpp */; };
+		E38A757F1B754C5CAAC9794A /* ag_alpha_shape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 39B70C4834F440599A3805B5 /* ag_alpha_shape.cpp */; };
+		EBACDE907F2C42319F990380 /* ag_imaging.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9906922A7B39481FA4D66F17 /* ag_imaging.cpp */; };
+		ECB8EA3E6B6949AFA230F088 /* ag_sweepline_intersections.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C91C17BF0EC04F5D936E4CF6 /* ag_sweepline_intersections.cpp */; };
+		EDDD700DBA73494A904773F5 /* tinyspline.c in Sources */ = {isa = PBXBuildFile; fileRef = 84A7D6E1F24241CFB61B0C5C /* tinyspline.c */; };
+		EE361C2E2EBB4CC2A2E2A7AC /* algo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A6795BB64D87431BA9C8E2E1 /* algo.cpp */; };
+		F247F81AC96F42CA9AE82865 /* tinyxml2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BDF281AC8C58425385F9E894 /* tinyxml2.cpp */; };
+		F2CA396BF55B461495199479 /* FastNoise.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 342222C7D2CF4301BBCA1810 /* FastNoise.cpp */; };
+		FA5D0CBDAE7E446B91279E36 /* poly2.c in Sources */ = {isa = PBXBuildFile; fileRef = 40238D85863F4A04925774F4 /* poly2.c */; };
+		FAEBAEB3BE944771980B9951 /* ag_lqt_helpers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F5BEC0B0BC54E67B8FCB779 /* ag_lqt_helpers.cpp */; };
+		FB6F8F2E337B4E1CA2FF0085 /* user.c in Sources */ = {isa = PBXBuildFile; fileRef = D751B4BD414C418DA1C1AEEB /* user.c */; };
+		FE26FA841E8140139837789B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57A9E5CAC8E2412EB7F039F0 /* main.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		15F83DB3F8B94AAB8EF918EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 15D4A92BDC974B6B80785564 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9F089FAB3D1243FA8A38C180;
+			remoteInfo = ZERO_CHECK;
+		};
+		1896C64BDDB245E8A3208B25 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 15D4A92BDC974B6B80785564 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9F089FAB3D1243FA8A38C180;
+			remoteInfo = ZERO_CHECK;
+		};
+		CEAC8BFC6BF1419A90460C50 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 15D4A92BDC974B6B80785564 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A69A788617E74B929927AC8D;
+			remoteInfo = strokestyles_testbed;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0281A562E2E64F0894CD57DF /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		05F3A25FD0DA4BBF8F05EB10 /* usermem.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = usermem.c; path = ../../cautograff/src/deps/qhull/usermem.c; sourceTree = SOURCE_ROOT; };
+		07D271122C7341CE91983103 /* rboxlib.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = rboxlib.c; path = ../../cautograff/src/deps/qhull/rboxlib.c; sourceTree = SOURCE_ROOT; };
+		091944CD659B47188E3622A4 /* merge.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = merge.c; path = ../../cautograff/src/deps/qhull/merge.c; sourceTree = SOURCE_ROOT; };
+		0C03DB5A02AE4085A609CEAC /* polypartition.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = polypartition.cpp; path = ../../cautograff/src/deps/polypartition/polypartition.cpp; sourceTree = SOURCE_ROOT; };
+		184832976FDD451A966BEC20 /* poly.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = poly.c; path = ../../cautograff/src/deps/qhull/poly.c; sourceTree = SOURCE_ROOT; };
+		1BA495D5F5204F18A64FFD25 /* sc_compute.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = sc_compute.cpp; path = src/strokestyles_prototypes/deps/sc/sc_compute.cpp; sourceTree = SOURCE_ROOT; };
+		1EBE31516EE24966BC7698CC /* clipper.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = clipper.cpp; path = ../../cautograff/src/deps/clipper2/clipper.cpp; sourceTree = SOURCE_ROOT; };
+		226825CFD8ED4946849E1079 /* tinyutf8.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = tinyutf8.cpp; path = ../../cautograff/src/deps/tinyutf8.cpp; sourceTree = SOURCE_ROOT; };
+		25CB51828D954C33B06C0705 /* ag_lqt.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ag_lqt.cpp; path = ../../cautograff/src/geom/ag_lqt.cpp; sourceTree = SOURCE_ROOT; };
+		281E285FFEFA4504BEB0D5C1 /* Hungarian.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = Hungarian.cpp; path = src/strokestyles_prototypes/deps/sc/Hungarian.cpp; sourceTree = SOURCE_ROOT; };
+		2B18D27C98CD4399BEFF30EC /* clipper_triangulation.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = clipper_triangulation.cpp; path = ../../cautograff/src/deps/clipper2/clipper_triangulation.cpp; sourceTree = SOURCE_ROOT; };
+		2C7369DFAEA246E8B1D96FA7 /* common.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = common.cpp; path = src/common.cpp; sourceTree = SOURCE_ROOT; };
+		2D5B46D5B3E24C7ABEA9ECF9 /* cm_vector_export.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = cm_vector_export.cpp; path = src/colormotor/cm_vector_export.cpp; sourceTree = SOURCE_ROOT; };
+		2F5BEC0B0BC54E67B8FCB779 /* ag_lqt_helpers.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ag_lqt_helpers.cpp; path = ../../cautograff/src/geom/ag_lqt_helpers.cpp; sourceTree = SOURCE_ROOT; };
+		342222C7D2CF4301BBCA1810 /* FastNoise.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = FastNoise.cpp; path = ../../cautograff/src/deps/FastNoise.cpp; sourceTree = SOURCE_ROOT; };
+		39B70C4834F440599A3805B5 /* ag_alpha_shape.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ag_alpha_shape.cpp; path = ../../cautograff/src/geom/ag_alpha_shape.cpp; sourceTree = SOURCE_ROOT; };
+		3B8D65C8283E478FABBCAA1D /* ag_color.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ag_color.cpp; path = ../../cautograff/src/ag_color.cpp; sourceTree = SOURCE_ROOT; };
+		3CCCB839D9CE438582D8ECE9 /* EMG.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = EMG.cpp; path = src/strokestyles_prototypes/deps/sc/EMG.cpp; sourceTree = SOURCE_ROOT; };
+		40238D85863F4A04925774F4 /* poly2.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = poly2.c; path = ../../cautograff/src/deps/qhull/poly2.c; sourceTree = SOURCE_ROOT; };
+		46BB630C83C443C38CE32861 /* random.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = random.c; path = ../../cautograff/src/deps/qhull/random.c; sourceTree = SOURCE_ROOT; };
+		46EB7FE2360C4930B331E9D2 /* fitCurves.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = fitCurves.cpp; path = ../../cautograff/src/deps/fitCurves.cpp; sourceTree = SOURCE_ROOT; };
+		4A09F95C927146218977E950 /* cm_imgui_app.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = cm_imgui_app.cpp; path = src/colormotor/app/cm_imgui_app.cpp; sourceTree = SOURCE_ROOT; };
+		4BE87FF7E07444DCA6B9E263 /* stat.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = stat.c; path = ../../cautograff/src/deps/qhull/stat.c; sourceTree = SOURCE_ROOT; };
+		53DC5B75A65D451B82F1B781 /* ag_clothoid.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ag_clothoid.cpp; path = ../../cautograff/src/geom/ag_clothoid.cpp; sourceTree = SOURCE_ROOT; };
+		5507F0E7A52F4BDDA7C8E2B8 /* ag_graff_primitives.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ag_graff_primitives.cpp; path = ../../cautograff/src/graffiti/ag_graff_primitives.cpp; sourceTree = SOURCE_ROOT; };
+		557005B1DAAE4DE1B5A6AA07 /* userprintf_rbox.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = userprintf_rbox.c; path = ../../cautograff/src/deps/qhull/userprintf_rbox.c; sourceTree = SOURCE_ROOT; };
+		558CACDD419547F882324325 /* tinysplinecpp.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = tinysplinecpp.cpp; path = ../../cautograff/src/deps/tinyspline/tinysplinecpp.cpp; sourceTree = SOURCE_ROOT; };
+		57A9E5CAC8E2412EB7F039F0 /* main.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = main.cpp; path = src/main.cpp; sourceTree = SOURCE_ROOT; };
+		57BAD93202854D598AF6C907 /* cm_params.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = cm_params.cpp; path = src/colormotor/cm_params.cpp; sourceTree = SOURCE_ROOT; };
+		61D4A3422DB0448AB71C0308 /* ag_random.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ag_random.cpp; path = ../../cautograff/src/ag_random.cpp; sourceTree = SOURCE_ROOT; };
+		63EB08A6820A4F9799311B01 /* ag_dynamic_spline.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ag_dynamic_spline.cpp; path = ../../cautograff/src/geom/ag_dynamic_spline.cpp; sourceTree = SOURCE_ROOT; };
+		6E5E48481C054EE495D8FB68 /* cm_utils_osx.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = cm_utils_osx.mm; path = src/colormotor/platform/cm_utils_osx.mm; sourceTree = SOURCE_ROOT; };
+		6F96161565BF4CE48E80FC2C /* hist_cost.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = hist_cost.cpp; path = src/strokestyles_prototypes/deps/sc/hist_cost.cpp; sourceTree = SOURCE_ROOT; };
+		755A55F0108F484F9A5CD3FB /* ag_numeric.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ag_numeric.cpp; path = ../../cautograff/src/ag_numeric.cpp; sourceTree = SOURCE_ROOT; };
+		773BE8EBD7164669B8F78941 /* ag_layering_data.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ag_layering_data.cpp; path = ../../cautograff/src/graffiti/ag_layering_data.cpp; sourceTree = SOURCE_ROOT; };
+		7763ED708E2B4EE4BA628A16 /* spectrum.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = spectrum.cpp; path = src/colormotor/app/spectrum.cpp; sourceTree = SOURCE_ROOT; };
+		7DF3D4756A3440409651D729 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		7F19E17250E44953A097EFB1 /* ase.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ase.cpp; path = ../../cautograff/src/deps/ase/ase.cpp; sourceTree = SOURCE_ROOT; };
+		83FCC474EAF1485E88313B78 /* qset.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = qset.c; path = ../../cautograff/src/deps/qhull/qset.c; sourceTree = SOURCE_ROOT; };
+		84A7D6E1F24241CFB61B0C5C /* tinyspline.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = tinyspline.c; path = ../../cautograff/src/deps/tinyspline/tinyspline.c; sourceTree = SOURCE_ROOT; };
+		850AA8D3DEB1447D9AC42FA1 /* mem.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = mem.c; path = ../../cautograff/src/deps/qhull/mem.c; sourceTree = SOURCE_ROOT; };
+		855F41A32CEE46B7AB1586B9 /* font_stylization_base.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = font_stylization_base.cpp; path = src/demos/font_stylization_base.cpp; sourceTree = SOURCE_ROOT; };
+		868885CC63EA4DA682CD2C3E /* tangent_cover.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = tangent_cover.cpp; path = src/strokestyles_prototypes/deps/tangent_cover/tangent_cover.cpp; sourceTree = SOURCE_ROOT; };
+		94813631BCB7474292B8FC8E /* imgui_draw.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = imgui_draw.cpp; path = src/colormotor/app/imgui_draw.cpp; sourceTree = SOURCE_ROOT; };
+		94EE59E54FBB4EA087ACE661 /* userprintf.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = userprintf.c; path = ../../cautograff/src/deps/qhull/userprintf.c; sourceTree = SOURCE_ROOT; };
+		9906922A7B39481FA4D66F17 /* ag_imaging.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ag_imaging.cpp; path = ../../cautograff/src/ag_imaging.cpp; sourceTree = SOURCE_ROOT; };
+		A0B83A7D2360428DB7143FC8 /* gfx_ui.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = gfx_ui.cpp; path = src/colormotor/app/gfx_ui.cpp; sourceTree = SOURCE_ROOT; };
+		A6795BB64D87431BA9C8E2E1 /* algo.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = algo.cpp; path = ../../cautograff/src/deps/colours/algo.cpp; sourceTree = SOURCE_ROOT; };
+		A8C6D5C2AE084B9F917E732B /* imgui.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = imgui.cpp; path = src/colormotor/app/imgui.cpp; sourceTree = SOURCE_ROOT; };
+		A9D7BBBB0F7D49569E617E7C /* geom2.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = geom2.c; path = ../../cautograff/src/deps/qhull/geom2.c; sourceTree = SOURCE_ROOT; };
+		AF043E0A6B324FCA90780162 /* ag_geom.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ag_geom.cpp; path = ../../cautograff/src/geom/ag_geom.cpp; sourceTree = SOURCE_ROOT; };
+		AF9E3F5716164826917CF331 /* representation.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = representation.cpp; path = ../../cautograff/src/deps/colours/representation.cpp; sourceTree = SOURCE_ROOT; };
+		B4585583950948D590FF70F3 /* ag_schematize.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ag_schematize.cpp; path = ../../cautograff/src/graffiti/ag_schematize.cpp; sourceTree = SOURCE_ROOT; };
+		B71C06545481418C91133F45 /* imgui_demo.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = imgui_demo.cpp; path = src/colormotor/app/imgui_demo.cpp; sourceTree = SOURCE_ROOT; };
+		B8A69AF2AC6B48B1AB9A3923 /* ag_json.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ag_json.cpp; path = ../../cautograff/src/ag_json.cpp; sourceTree = SOURCE_ROOT; };
+		B8B0AF4A4EC54D7B8E48434B /* imgui_widgets.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = imgui_widgets.cpp; path = src/colormotor/app/imgui_widgets.cpp; sourceTree = SOURCE_ROOT; };
+		BDF281AC8C58425385F9E894 /* tinyxml2.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = tinyxml2.cpp; path = src/colormotor/deps/tinyxml2/tinyxml2.cpp; sourceTree = SOURCE_ROOT; };
+		BF3ABB89357F4008B94BC3DC /* strokestyles_testbed */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = strokestyles_testbed; sourceTree = BUILT_PRODUCTS_DIR; };
+		C048ADE2BF6D4D47AA91853F /* cm_math.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = cm_math.cpp; path = src/colormotor/cm_math.cpp; sourceTree = SOURCE_ROOT; };
+		C20557B5416A43679A93F6F3 /* ag_skeletal_strokes.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ag_skeletal_strokes.cpp; path = ../../cautograff/src/graffiti/ag_skeletal_strokes.cpp; sourceTree = SOURCE_ROOT; };
+		C554197AEC1444E789C6DCEC /* ag_graff_font.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ag_graff_font.cpp; path = ../../cautograff/src/graffiti/ag_graff_font.cpp; sourceTree = SOURCE_ROOT; };
+		C8419E131F8D4D35A2048E14 /* cm_imgui.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = cm_imgui.cpp; path = src/colormotor/app/cm_imgui.cpp; sourceTree = SOURCE_ROOT; };
+		C91C17BF0EC04F5D936E4CF6 /* ag_sweepline_intersections.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ag_sweepline_intersections.cpp; path = ../../cautograff/src/geom/ag_sweepline_intersections.cpp; sourceTree = SOURCE_ROOT; };
+		D1C13C105D4140289EC025C1 /* cm_gfx.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = cm_gfx.cpp; path = src/colormotor/cm_gfx.cpp; sourceTree = SOURCE_ROOT; };
+		D60AEE5D26590AAD0083D12A /* font_stylization_graffiti.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = font_stylization_graffiti.h; path = src/demos/font_stylization_graffiti.h; sourceTree = "<group>"; };
+		D60AEE5E26590AAD0083D12A /* curved_skeletal_test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = curved_skeletal_test.h; path = src/demos/curved_skeletal_test.h; sourceTree = "<group>"; };
+		D60AEE5F26590AAD0083D12A /* font_stylization_particle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = font_stylization_particle.h; path = src/demos/font_stylization_particle.h; sourceTree = "<group>"; };
+		D60AEE6026590AAD0083D12A /* font_stylization_stroke.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = font_stylization_stroke.h; path = src/demos/font_stylization_stroke.h; sourceTree = "<group>"; };
+		D60AEE6126590AAD0083D12A /* lqt_semitied_demo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lqt_semitied_demo.h; path = src/demos/lqt_semitied_demo.h; sourceTree = "<group>"; };
+		D60AEE6226590AAD0083D12A /* sim-old.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "sim-old.h"; path = "src/demos/sim-old.h"; sourceTree = "<group>"; };
+		D60AEE6326590AAD0083D12A /* lqt_bezier_demo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lqt_bezier_demo.h; path = src/demos/lqt_bezier_demo.h; sourceTree = "<group>"; };
+		D60AEE6426590AAD0083D12A /* font_stylization_base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = font_stylization_base.h; path = src/demos/font_stylization_base.h; sourceTree = "<group>"; };
+		D60AEE6526590AAD0083D12A /* basic_module.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = basic_module.h; path = src/demos/basic_module.h; sourceTree = "<group>"; };
+		D60AEE6626590AAD0083D12A /* demo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = demo.h; path = src/demos/demo.h; sourceTree = "<group>"; };
+		D60AEE6726590AAD0083D12A /* interactive_graff.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = interactive_graff.h; path = src/demos/interactive_graff.h; sourceTree = "<group>"; };
+		D60AEE6826590AAD0083D12A /* font_stylization_similarity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = font_stylization_similarity.h; path = src/demos/font_stylization_similarity.h; sourceTree = "<group>"; };
+		D60AEE6926590AAD0083D12A /* instantiate_modules.incl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = instantiate_modules.incl; path = src/demos/instantiate_modules.incl; sourceTree = "<group>"; };
+		D60AEE6A26590AAD0083D12A /* interactive_calligraphy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = interactive_calligraphy.h; path = src/demos/interactive_calligraphy.h; sourceTree = "<group>"; };
+		D60AEE6B26590AAD0083D12A /* include_modules.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = include_modules.h; path = src/demos/include_modules.h; sourceTree = "<group>"; };
+		D751B4BD414C418DA1C1AEEB /* user.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = user.c; path = ../../cautograff/src/deps/qhull/user.c; sourceTree = SOURCE_ROOT; };
+		DA065204DD034F4E85909D62 /* ag_planar_map.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ag_planar_map.cpp; path = ../../cautograff/src/geom/ag_planar_map.cpp; sourceTree = SOURCE_ROOT; };
+		DE6E5C3EE21E4416A309128A /* cm_utils.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = cm_utils.cpp; path = src/colormotor/cm_utils.cpp; sourceTree = SOURCE_ROOT; };
+		E1663904CFFB408A8B346F42 /* ag_svg.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ag_svg.cpp; path = ../../cautograff/src/ag_svg.cpp; sourceTree = SOURCE_ROOT; };
+		E17469BF38324858930AAFFD /* autograff.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = autograff.cpp; path = ../../cautograff/src/autograff.cpp; sourceTree = SOURCE_ROOT; };
+		E22F8F9A5F99428CB390B3DE /* ag_utils.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ag_utils.cpp; path = ../../cautograff/src/ag_utils.cpp; sourceTree = SOURCE_ROOT; };
+		E5174B6F3D3D414489B566B6 /* ag_turtle.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ag_turtle.cpp; path = ../../cautograff/src/geom/ag_turtle.cpp; sourceTree = SOURCE_ROOT; };
+		E5E7BC5A3C72423EB113AA86 /* geom.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = geom.c; path = ../../cautograff/src/deps/qhull/geom.c; sourceTree = SOURCE_ROOT; };
+		E9FEB413E4D9486089CBED53 /* global.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = global.c; path = ../../cautograff/src/deps/qhull/global.c; sourceTree = SOURCE_ROOT; };
+		ECA4480DAABF42FAA9E88273 /* ciecam02.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = ciecam02.c; path = ../../cautograff/src/deps/colours/ciecam02.c; sourceTree = SOURCE_ROOT; };
+		F2E75E2AD5A74BEC96F69A1A /* libqhull.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = libqhull.c; path = ../../cautograff/src/deps/qhull/libqhull.c; sourceTree = SOURCE_ROOT; };
+		F778D0143B53401A8FC36A6D /* ag_layering.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ag_layering.cpp; path = ../../cautograff/src/graffiti/ag_layering.cpp; sourceTree = SOURCE_ROOT; };
+		FE29B4D57EC04860B336FE97 /* io.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = io.c; path = ../../cautograff/src/deps/qhull/io.c; sourceTree = SOURCE_ROOT; };
+		FFA01CD6EB374318A8404EE9 /* ag_colormotor.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ag_colormotor.cpp; path = ../../cautograff/src/ag_colormotor.cpp; sourceTree = SOURCE_ROOT; };
+		FFC7CEBA4AB144CF883147E1 /* clipper_offset.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = clipper_offset.cpp; path = ../../cautograff/src/deps/clipper2/clipper_offset.cpp; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		790C911A04164E239ADE9A65 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		231E5C6BBBE54B2FAD8BF8F1 /* strokestyles_testbed */ = {
+			isa = PBXGroup;
+			children = (
+				D60AEE5C26590A980083D12A /* demos */,
+				8C373D52D93E4139949B40A0 /* Source Files */,
+				0281A562E2E64F0894CD57DF /* CMakeLists.txt */,
+			);
+			name = strokestyles_testbed;
+			sourceTree = "<group>";
+		};
+		4723E3AFE6D64B489B054587 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		857BCE5E5412493BAB268AAD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8614A324AFC042D4BDEA759E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BF3ABB89357F4008B94BC3DC /* strokestyles_testbed */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8C373D52D93E4139949B40A0 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				3B8D65C8283E478FABBCAA1D /* ag_color.cpp */,
+				FFA01CD6EB374318A8404EE9 /* ag_colormotor.cpp */,
+				9906922A7B39481FA4D66F17 /* ag_imaging.cpp */,
+				B8A69AF2AC6B48B1AB9A3923 /* ag_json.cpp */,
+				755A55F0108F484F9A5CD3FB /* ag_numeric.cpp */,
+				61D4A3422DB0448AB71C0308 /* ag_random.cpp */,
+				E1663904CFFB408A8B346F42 /* ag_svg.cpp */,
+				E22F8F9A5F99428CB390B3DE /* ag_utils.cpp */,
+				E17469BF38324858930AAFFD /* autograff.cpp */,
+				342222C7D2CF4301BBCA1810 /* FastNoise.cpp */,
+				7F19E17250E44953A097EFB1 /* ase.cpp */,
+				1EBE31516EE24966BC7698CC /* clipper.cpp */,
+				FFC7CEBA4AB144CF883147E1 /* clipper_offset.cpp */,
+				2B18D27C98CD4399BEFF30EC /* clipper_triangulation.cpp */,
+				A6795BB64D87431BA9C8E2E1 /* algo.cpp */,
+				ECA4480DAABF42FAA9E88273 /* ciecam02.c */,
+				AF9E3F5716164826917CF331 /* representation.cpp */,
+				46EB7FE2360C4930B331E9D2 /* fitCurves.cpp */,
+				0C03DB5A02AE4085A609CEAC /* polypartition.cpp */,
+				E5E7BC5A3C72423EB113AA86 /* geom.c */,
+				A9D7BBBB0F7D49569E617E7C /* geom2.c */,
+				E9FEB413E4D9486089CBED53 /* global.c */,
+				FE29B4D57EC04860B336FE97 /* io.c */,
+				F2E75E2AD5A74BEC96F69A1A /* libqhull.c */,
+				850AA8D3DEB1447D9AC42FA1 /* mem.c */,
+				091944CD659B47188E3622A4 /* merge.c */,
+				184832976FDD451A966BEC20 /* poly.c */,
+				40238D85863F4A04925774F4 /* poly2.c */,
+				83FCC474EAF1485E88313B78 /* qset.c */,
+				46BB630C83C443C38CE32861 /* random.c */,
+				07D271122C7341CE91983103 /* rboxlib.c */,
+				4BE87FF7E07444DCA6B9E263 /* stat.c */,
+				D751B4BD414C418DA1C1AEEB /* user.c */,
+				05F3A25FD0DA4BBF8F05EB10 /* usermem.c */,
+				94EE59E54FBB4EA087ACE661 /* userprintf.c */,
+				557005B1DAAE4DE1B5A6AA07 /* userprintf_rbox.c */,
+				84A7D6E1F24241CFB61B0C5C /* tinyspline.c */,
+				558CACDD419547F882324325 /* tinysplinecpp.cpp */,
+				226825CFD8ED4946849E1079 /* tinyutf8.cpp */,
+				39B70C4834F440599A3805B5 /* ag_alpha_shape.cpp */,
+				53DC5B75A65D451B82F1B781 /* ag_clothoid.cpp */,
+				63EB08A6820A4F9799311B01 /* ag_dynamic_spline.cpp */,
+				AF043E0A6B324FCA90780162 /* ag_geom.cpp */,
+				25CB51828D954C33B06C0705 /* ag_lqt.cpp */,
+				2F5BEC0B0BC54E67B8FCB779 /* ag_lqt_helpers.cpp */,
+				DA065204DD034F4E85909D62 /* ag_planar_map.cpp */,
+				C91C17BF0EC04F5D936E4CF6 /* ag_sweepline_intersections.cpp */,
+				E5174B6F3D3D414489B566B6 /* ag_turtle.cpp */,
+				C554197AEC1444E789C6DCEC /* ag_graff_font.cpp */,
+				5507F0E7A52F4BDDA7C8E2B8 /* ag_graff_primitives.cpp */,
+				F778D0143B53401A8FC36A6D /* ag_layering.cpp */,
+				773BE8EBD7164669B8F78941 /* ag_layering_data.cpp */,
+				B4585583950948D590FF70F3 /* ag_schematize.cpp */,
+				C20557B5416A43679A93F6F3 /* ag_skeletal_strokes.cpp */,
+				C8419E131F8D4D35A2048E14 /* cm_imgui.cpp */,
+				4A09F95C927146218977E950 /* cm_imgui_app.cpp */,
+				A0B83A7D2360428DB7143FC8 /* gfx_ui.cpp */,
+				A8C6D5C2AE084B9F917E732B /* imgui.cpp */,
+				B71C06545481418C91133F45 /* imgui_demo.cpp */,
+				94813631BCB7474292B8FC8E /* imgui_draw.cpp */,
+				B8B0AF4A4EC54D7B8E48434B /* imgui_widgets.cpp */,
+				7763ED708E2B4EE4BA628A16 /* spectrum.cpp */,
+				D1C13C105D4140289EC025C1 /* cm_gfx.cpp */,
+				C048ADE2BF6D4D47AA91853F /* cm_math.cpp */,
+				57BAD93202854D598AF6C907 /* cm_params.cpp */,
+				DE6E5C3EE21E4416A309128A /* cm_utils.cpp */,
+				2D5B46D5B3E24C7ABEA9ECF9 /* cm_vector_export.cpp */,
+				BDF281AC8C58425385F9E894 /* tinyxml2.cpp */,
+				6E5E48481C054EE495D8FB68 /* cm_utils_osx.mm */,
+				2C7369DFAEA246E8B1D96FA7 /* common.cpp */,
+				855F41A32CEE46B7AB1586B9 /* font_stylization_base.cpp */,
+				57A9E5CAC8E2412EB7F039F0 /* main.cpp */,
+				3CCCB839D9CE438582D8ECE9 /* EMG.cpp */,
+				281E285FFEFA4504BEB0D5C1 /* Hungarian.cpp */,
+				6F96161565BF4CE48E80FC2C /* hist_cost.cpp */,
+				1BA495D5F5204F18A64FFD25 /* sc_compute.cpp */,
+				868885CC63EA4DA682CD2C3E /* tangent_cover.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		C52EEBFEEB2F41179C1B2DDB /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				4723E3AFE6D64B489B054587 /* CMake Rules */,
+				7DF3D4756A3440409651D729 /* CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		D60AEE5C26590A980083D12A /* demos */ = {
+			isa = PBXGroup;
+			children = (
+				D60AEE6526590AAD0083D12A /* basic_module.h */,
+				D60AEE5E26590AAD0083D12A /* curved_skeletal_test.h */,
+				D60AEE6626590AAD0083D12A /* demo.h */,
+				D60AEE6426590AAD0083D12A /* font_stylization_base.h */,
+				D60AEE5D26590AAD0083D12A /* font_stylization_graffiti.h */,
+				D60AEE5F26590AAD0083D12A /* font_stylization_particle.h */,
+				D60AEE6826590AAD0083D12A /* font_stylization_similarity.h */,
+				D60AEE6026590AAD0083D12A /* font_stylization_stroke.h */,
+				D60AEE6B26590AAD0083D12A /* include_modules.h */,
+				D60AEE6926590AAD0083D12A /* instantiate_modules.incl */,
+				D60AEE6A26590AAD0083D12A /* interactive_calligraphy.h */,
+				D60AEE6726590AAD0083D12A /* interactive_graff.h */,
+				D60AEE6326590AAD0083D12A /* lqt_bezier_demo.h */,
+				D60AEE6126590AAD0083D12A /* lqt_semitied_demo.h */,
+				D60AEE6226590AAD0083D12A /* sim-old.h */,
+			);
+			name = demos;
+			sourceTree = "<group>";
+		};
+		F2BC422B434F493E82B9F69E = {
+			isa = PBXGroup;
+			children = (
+				231E5C6BBBE54B2FAD8BF8F1 /* strokestyles_testbed */,
+				C52EEBFEEB2F41179C1B2DDB /* ALL_BUILD */,
+				8614A324AFC042D4BDEA759E /* Products */,
+				857BCE5E5412493BAB268AAD /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A69A788617E74B929927AC8D /* strokestyles_testbed */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E20C7BFF0D3A4BF19E50B11E /* Build configuration list for PBXNativeTarget "strokestyles_testbed" */;
+			buildPhases = (
+				79337490B30243ACB9DFCADE /* Sources */,
+				790C911A04164E239ADE9A65 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A393B45AAD6342E286DA5B4A /* PBXTargetDependency */,
+			);
+			name = strokestyles_testbed;
+			productName = strokestyles_testbed;
+			productReference = BF3ABB89357F4008B94BC3DC /* strokestyles_testbed */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		15D4A92BDC974B6B80785564 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1130;
+			};
+			buildConfigurationList = DDCF7F8FD2EC4AB5AEF3028C /* Build configuration list for PBXProject "strokestyles_testbed" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F2BC422B434F493E82B9F69E;
+			projectDirPath = ../;
+			projectRoot = "";
+			targets = (
+				12B4DE421EA24D6884F962CD /* ALL_BUILD */,
+				9F089FAB3D1243FA8A38C180 /* ZERO_CHECK */,
+				A69A788617E74B929927AC8D /* strokestyles_testbed */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4BE18B5EF76A4D4D8E8A49E4 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/colormotor/develop/autograff/strokestyles_workspace/strokestyles_interactive_demos/strokestyles_testbed/xcode -f /Users/colormotor/develop/autograff/strokestyles_workspace/strokestyles_interactive_demos/strokestyles_testbed/xcode/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			showEnvVarsInLog = 0;
+		};
+		7B529861BFDF4F02AD2A043F /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/colormotor/develop/autograff/strokestyles_workspace/strokestyles_interactive_demos/strokestyles_testbed/xcode -f /Users/colormotor/develop/autograff/strokestyles_workspace/strokestyles_interactive_demos/strokestyles_testbed/xcode/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		79337490B30243ACB9DFCADE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				08F8E62CAF95484E8F552650 /* ag_color.cpp in Sources */,
+				592D029B804D419DAC932864 /* ag_colormotor.cpp in Sources */,
+				EBACDE907F2C42319F990380 /* ag_imaging.cpp in Sources */,
+				2B8B1CE2B97D4F74A35EE5D5 /* ag_json.cpp in Sources */,
+				0F80F4CCFD1E49C79F7B77FB /* ag_numeric.cpp in Sources */,
+				B6AEF33BB2374CF4BA06AC49 /* ag_random.cpp in Sources */,
+				120A4178E8974859B106FF37 /* ag_svg.cpp in Sources */,
+				423F18D529DF46F6A6CC58C6 /* ag_utils.cpp in Sources */,
+				C4F88F2CD85E469EACD61393 /* autograff.cpp in Sources */,
+				F2CA396BF55B461495199479 /* FastNoise.cpp in Sources */,
+				1253CF96C39E4E71B89CC1B7 /* ase.cpp in Sources */,
+				64DB71C36E3045F8869C0D00 /* clipper.cpp in Sources */,
+				D0D5395955464B59B9AB1692 /* clipper_offset.cpp in Sources */,
+				BA56A03E7FB449F0BE0B0AD4 /* clipper_triangulation.cpp in Sources */,
+				EE361C2E2EBB4CC2A2E2A7AC /* algo.cpp in Sources */,
+				5E1F5BAA707A4738B20651F2 /* ciecam02.c in Sources */,
+				C9B40B8C025E492EB8932F55 /* representation.cpp in Sources */,
+				4924A9033A5B43979FD9ED0D /* fitCurves.cpp in Sources */,
+				2B91D5A9FA0044E0B7DFC731 /* polypartition.cpp in Sources */,
+				20091E96BC57472C88562813 /* geom.c in Sources */,
+				B20F1AEFCA7F4991B820B1AE /* geom2.c in Sources */,
+				73532E4F8D5D4ABAB595F601 /* global.c in Sources */,
+				249FB31406624722A1AB456B /* io.c in Sources */,
+				6FD45B7C08894A3088F45491 /* libqhull.c in Sources */,
+				ABE801B1EDAD4DA590E4C364 /* mem.c in Sources */,
+				412B5BADF7B5423FA5014E76 /* merge.c in Sources */,
+				C066496C62A44E1EAFBD9D5B /* poly.c in Sources */,
+				FA5D0CBDAE7E446B91279E36 /* poly2.c in Sources */,
+				587DDAE2E04C478EB1F8D5FC /* qset.c in Sources */,
+				5E969EBF00FC4A558AEA4668 /* random.c in Sources */,
+				995D010EEE124A399DE21366 /* rboxlib.c in Sources */,
+				5FAE84DABAEE4D07BC8174F6 /* stat.c in Sources */,
+				FB6F8F2E337B4E1CA2FF0085 /* user.c in Sources */,
+				9B4CE28FA5EC47CB8C4E07D2 /* usermem.c in Sources */,
+				30238D4E12DF4BAF853ED32C /* userprintf.c in Sources */,
+				75301A7818D849D0A0FD6024 /* userprintf_rbox.c in Sources */,
+				EDDD700DBA73494A904773F5 /* tinyspline.c in Sources */,
+				BA07231F9FC648B29066587D /* tinysplinecpp.cpp in Sources */,
+				A44394DBD3FB44D297BFAD4C /* tinyutf8.cpp in Sources */,
+				E38A757F1B754C5CAAC9794A /* ag_alpha_shape.cpp in Sources */,
+				E225F9AFF78A46038D2AF02F /* ag_clothoid.cpp in Sources */,
+				0BF79AD7538F4E718C79F97A /* ag_dynamic_spline.cpp in Sources */,
+				D2A202440E6247958D085F9D /* ag_geom.cpp in Sources */,
+				DB3DB8B59FBC41C5924EC291 /* ag_lqt.cpp in Sources */,
+				FAEBAEB3BE944771980B9951 /* ag_lqt_helpers.cpp in Sources */,
+				DFB6F7909565457FB855F916 /* ag_planar_map.cpp in Sources */,
+				ECB8EA3E6B6949AFA230F088 /* ag_sweepline_intersections.cpp in Sources */,
+				B4938CB391AF458EAFD1090E /* ag_turtle.cpp in Sources */,
+				9915E950BD4A493EBC8141E1 /* ag_graff_font.cpp in Sources */,
+				57BA6D4AE0A1478EAD60B778 /* ag_graff_primitives.cpp in Sources */,
+				2D9E07A2F91D4B089BD890D8 /* ag_layering.cpp in Sources */,
+				2CB89985307D407796FCA36C /* ag_layering_data.cpp in Sources */,
+				2769F3DD175F4BAC977D635F /* ag_schematize.cpp in Sources */,
+				2BEA6775B20349E8A019E5AD /* ag_skeletal_strokes.cpp in Sources */,
+				A4F58170CAB741248FD72962 /* cm_imgui.cpp in Sources */,
+				2AA79DC73C9D422890478130 /* cm_imgui_app.cpp in Sources */,
+				4F026AF20D6949C7AD37A4E0 /* gfx_ui.cpp in Sources */,
+				9013391215C044C79F52C6D6 /* imgui.cpp in Sources */,
+				11E19EA2E9444FDDAF82078C /* imgui_demo.cpp in Sources */,
+				AA2732E2B25A4A1BB3A48114 /* imgui_draw.cpp in Sources */,
+				0B1547C08F894DEBB63A8FE2 /* imgui_widgets.cpp in Sources */,
+				C1F72DB5D5C74E11A140E908 /* spectrum.cpp in Sources */,
+				3E89DC744F084B3190AC6835 /* cm_gfx.cpp in Sources */,
+				BB1C49C43E304652BB3157D8 /* cm_math.cpp in Sources */,
+				5C372B7C507E4CF089FC838C /* cm_params.cpp in Sources */,
+				0165432263B54769843AD2C9 /* cm_utils.cpp in Sources */,
+				43F580F2AECD402EB3F5EC70 /* cm_vector_export.cpp in Sources */,
+				F247F81AC96F42CA9AE82865 /* tinyxml2.cpp in Sources */,
+				561BF946D6184E0C861BF402 /* cm_utils_osx.mm in Sources */,
+				DD8E114A5DBC431C9526306C /* common.cpp in Sources */,
+				0391ED40999F4A35ADCDF144 /* font_stylization_base.cpp in Sources */,
+				FE26FA841E8140139837789B /* main.cpp in Sources */,
+				16B9684FB23845068841C672 /* EMG.cpp in Sources */,
+				0FBA00E4BB0A484E9A261248 /* Hungarian.cpp in Sources */,
+				86ADA56539D84F23959FBC7D /* hist_cost.cpp in Sources */,
+				900B8476A37C4BEF8E2CF5B2 /* sc_compute.cpp in Sources */,
+				796769ABAA8F4395B6AD530C /* tangent_cover.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0A5B1A371DBC460BBCE13CB4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A69A788617E74B929927AC8D /* strokestyles_testbed */;
+			targetProxy = CEAC8BFC6BF1419A90460C50 /* PBXContainerItemProxy */;
+		};
+		921360D333B542E2A3C087AC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9F089FAB3D1243FA8A38C180 /* ZERO_CHECK */;
+			targetProxy = 15F83DB3F8B94AAB8EF918EE /* PBXContainerItemProxy */;
+		};
+		A393B45AAD6342E286DA5B4A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9F089FAB3D1243FA8A38C180 /* ZERO_CHECK */;
+			targetProxy = 1896C64BDDB245E8A3208B25 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		02020ADEEA504E83BA767C62 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/colormotor/develop/autograff/strokestyles_workspace/strokestyles_interactive_demos/strokestyles_testbed/xcode;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = RelWithDebInfo;
+		};
+		15DC0A024C7448BB8A881C5A /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/colormotor/develop/autograff/strokestyles_workspace/strokestyles_interactive_demos/strokestyles_testbed/bin/RelWithDebInfo;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					GL_SILENCE_DEPRECATION,
+					INCLUDE_PROTOTYPES,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/Users/colormotor/develop/autograff/strokestyles_workspace/strokestyles_interactive_demos/strokestyles_testbed/src/strokestyles_prototypes,
+					/Users/colormotor/develop/autograff/strokestyles_workspace/strokestyles_interactive_demos/strokestyles_testbed/include,
+					/Users/colormotor/develop/autograff/strokestyles_workspace/strokestyles_interactive_demos/strokestyles_testbed/src,
+					/Users/colormotor/develop/autograff/strokestyles_workspace/strokestyles_interactive_demos/strokestyles_testbed/src/colormotor,
+					/Users/colormotor/develop/autograff/strokestyles_workspace/strokestyles_interactive_demos/strokestyles_testbed/src/colormotor/deps,
+					/Users/colormotor/develop/autograff/strokestyles_workspace/strokestyles_interactive_demos/strokestyles_testbed/src/colormotor/app,
+					/Users/colormotor/develop/autograff/strokestyles_workspace/strokestyles_interactive_demos/strokestyles_testbed/src/colormotor/addons/app,
+					/Users/colormotor/opt/miniconda3/include,
+					/Users/colormotor/opt/miniconda3/include/opencv4,
+					/Users/colormotor/develop/autograff/strokestyles_workspace/strokestyles_interactive_demos/strokestyles_testbed/../../cautograff/src,
+					/Users/colormotor/develop/autograff/strokestyles_workspace/strokestyles_interactive_demos/strokestyles_testbed/../../cautograff/src/geom,
+					/Users/colormotor/develop/autograff/strokestyles_workspace/strokestyles_interactive_demos/strokestyles_testbed/../../cautograff/src/graffiti,
+					/Users/colormotor/develop/autograff/strokestyles_workspace/strokestyles_interactive_demos/strokestyles_testbed/../../cautograff/src/deps/ftgrays,
+					/Users/colormotor/develop/autograff/strokestyles_workspace/strokestyles_interactive_demos/strokestyles_testbed/../../cautograff/src/deps/tinyspline,
+					/Users/colormotor/develop/autograff/strokestyles_workspace/strokestyles_interactive_demos/strokestyles_testbed/../../cautograff/src/deps/arma_ext,
+					/Users/colormotor/develop/autograff/strokestyles_workspace/strokestyles_interactive_demos/strokestyles_testbed/src/colormotor/app/glfw3/include,
+				);
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = "/Users/colormotor/opt/miniconda3/lib /Users/colormotor/develop/autograff/strokestyles_workspace/strokestyles_interactive_demos/strokestyles_testbed/src/colormotor/app/glfw3/lib/osx";
+				LIBRARY_SEARCH_PATHS = (
+					"/Users/colormotor/opt/miniconda3/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/Users/colormotor/opt/miniconda3/lib,
+					"/Users/colormotor/develop/autograff/strokestyles_workspace/strokestyles_interactive_demos/strokestyles_testbed/src/colormotor/app/glfw3/lib/osx/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/Users/colormotor/develop/autograff/strokestyles_workspace/strokestyles_interactive_demos/strokestyles_testbed/src/colormotor/app/glfw3/lib/osx,
+					"$(inherited)",
+				);
+				OTHER_CFLAGS = (
+					"-DNDEBUG",
+					"-g",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-std=c++11",
+					"-Wno-absolute-value",
+					"-Wno-format",
+					"-Wno-switch",
+					"-Wno-macro-redefined",
+					"-Wno-deprecated-declarations",
+					"-Wno-dynamic-class-memaccess",
+					"-Wno-extra-qualification",
+					"-Wno-ignored-attributes",
+					"-Wno-dangling-else",
+					"-DNDEBUG",
+					"-g",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"-lopencv_core",
+					"-lopencv_imgproc",
+					"-lopencv_highgui",
+					"-lopencv_imgcodecs",
+					"-lopencv_videoio",
+					"-larmadillo",
+					"-lblas",
+					"-lboost_system",
+					"-lboost_filesystem",
+					"-lzmq",
+					"-framework",
+					CoreFoundation,
+					"-framework",
+					OpenGL,
+					"-framework",
+					Cocoa,
+					"-framework",
+					AppKit,
+					"-framework",
+					CoreVideo,
+					"-framework",
+					QTKit,
+					"-framework",
+					IOKit,
+					"-framework",
+					AGL,
+					"-framework",
+					GLUT,
+					"-framework",
+					Accelerate,
+					"-lglfw3",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = strokestyles_testbed;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/colormotor/develop/autograff/strokestyles_workspace/strokestyles_interactive_demos/strokestyles_testbed/xcode;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = RelWithDebInfo;
+		};
+		1B1C90580692458DB4F3E733 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/colormotor/develop/autograff/strokestyles_workspace/strokestyles_interactive_demos/strokestyles_testbed/xcode;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = MinSizeRel;
+		};
+		32922D6836B24559B155EAB3 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/colormotor/develop/autograff/strokestyles_workspace/strokestyles_interactive_demos/strokestyles_testbed/xcode;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = MinSizeRel;
+		};
+		49B47C7DD1F846C2BF84D0DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/colormotor/develop/autograff/strokestyles_workspace/strokestyles_interactive_demos/strokestyles_testbed/xcode;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Release;
+		};
+		641C90CB3388462FB6CA59AE /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/colormotor/develop/autograff/strokestyles_workspace/strokestyles_interactive_demos/strokestyles_testbed/bin/MinSizeRel;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					GL_SILENCE_DEPRECATION,
+					INCLUDE_PROTOTYPES,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/Users/colormotor/develop/autograff/strokestyles_workspace/strokestyles_interactive_demos/strokestyles_testbed/src/strokestyles_prototypes,
+					/Users/colormotor/develop/autograff/strokestyles_workspace/strokestyles_interactive_demos/strokestyles_testbed/include,
+					/Users/colormotor/develop/autograff/strokestyles_workspace/strokestyles_interactive_demos/strokestyles_testbed/src,
+					/Users/colormotor/develop/autograff/strokestyles_workspace/strokestyles_interactive_demos/strokestyles_testbed/src/colormotor,
+					/Users/colormotor/develop/autograff/strokestyles_workspace/strokestyles_interactive_demos/strokestyles_testbed/src/colormotor/deps,
+					/Users/colormotor/develop/autograff/strokestyles_workspace/strokestyles_interactive_demos/strokestyles_testbed/src/colormotor/app,
+					/Users/colormotor/develop/autograff/strokestyles_workspace/strokestyles_interactive_demos/strokestyles_testbed/src/colormotor/addons/app,
+					/Users/colormotor/opt/miniconda3/include,
+					/Users/colormotor/opt/miniconda3/include/opencv4,
+					/Users/colormotor/develop/autograff/strokestyles_workspace/strokestyles_interactive_demos/strokestyles_testbed/../../cautograff/src,
+					/Users/colormotor/develop/autograff/strokestyles_workspace/strokestyles_interactive_demos/strokestyles_testbed/../../cautograff/src/geom,
+					/Users/colormotor/develop/autograff/strokestyles_workspace/strokestyles_interactive_demos/strokestyles_testbed/../../cautograff/src/graffiti,
+					/Users/colormotor/develop/autograff/strokestyles_workspace/strokestyles_interactive_demos/strokestyles_testbed/../../cautograff/src/deps/ftgrays,
+					/Users/colormotor/develop/autograff/strokestyles_workspace/strokestyles_interactive_demos/strokestyles_testbed/../../cautograff/src/deps/tinyspline,
+					/Users/colormotor/develop/autograff/strokestyles_workspace/strokestyles_interactive_demos/strokestyles_testbed/../../cautograff/src/deps/arma_ext,
+					/Users/colormotor/develop/autograff/strokestyles_workspace/strokestyles_interactive_demos/strokestyles_testbed/src/colormotor/app/glfw3/include,
+				);
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = "/Users/colormotor/opt/miniconda3/lib /Users/colormotor/develop/autograff/strokestyles_workspace/strokestyles_interactive_demos/strokestyles_testbed/src/colormotor/app/glfw3/lib/osx";
+				LIBRARY_SEARCH_PATHS = (
+					"/Users/colormotor/opt/miniconda3/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/Users/colormotor/opt/miniconda3/lib,
+					"/Users/colormotor/develop/autograff/strokestyles_workspace/strokestyles_interactive_demos/strokestyles_testbed/src/colormotor/app/glfw3/lib/osx/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/Users/colormotor/develop/autograff/strokestyles_workspace/strokestyles_interactive_demos/strokestyles_testbed/src/colormotor/app/glfw3/lib/osx,
+					"$(inherited)",
+				);
+				OTHER_CFLAGS = (
+					"-DNDEBUG",
+					"-g",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-std=c++11",
+					"-Wno-absolute-value",
+					"-Wno-format",
+					"-Wno-switch",
+					"-Wno-macro-redefined",
+					"-Wno-deprecated-declarations",
+					"-Wno-dynamic-class-memaccess",
+					"-Wno-extra-qualification",
+					"-Wno-ignored-attributes",
+					"-Wno-dangling-else",
+					"-DNDEBUG",
+					"-g",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"-lopencv_core",
+					"-lopencv_imgproc",
+					"-lopencv_highgui",
+					"-lopencv_imgcodecs",
+					"-lopencv_videoio",
+					"-larmadillo",
+					"-lblas",
+					"-lboost_system",
+					"-lboost_filesystem",
+					"-lzmq",
+					"-framework",
+					CoreFoundation,
+					"-framework",
+					OpenGL,
+					"-framework",
+					Cocoa,
+					"-framework",
+					AppKit,
+					"-framework",
+					CoreVideo,
+					"-framework",
+					QTKit,
+					"-framework",
+					IOKit,
+					"-framework",
+					AGL,
+					"-framework",
+					GLUT,
+					"-framework",
+					Accelerate,
+					"-lglfw3",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = strokestyles_testbed;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/colormotor/develop/autograff/strokestyles_workspace/strokestyles_interactive_demos/strokestyles_testbed/xcode;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = MinSizeRel;
+		};
+		72180A14EA87401FA4E50DC8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/colormotor/develop/autograff/strokestyles_workspace/strokestyles_interactive_demos/strokestyles_testbed/xcode;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Release;
+		};
+		739D4EA10AAF4055B149F0A9 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk;
+				SYMROOT = /Users/colormotor/develop/autograff/strokestyles_workspace/strokestyles_interactive_demos/strokestyles_testbed/xcode/build;
+			};
+			name = RelWithDebInfo;
+		};
+		790F5DEDB0294BDAA5894E8A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/colormotor/develop/autograff/strokestyles_workspace/strokestyles_interactive_demos/strokestyles_testbed/xcode;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Debug;
+		};
+		89F8C4FF04F04D30B831CBDC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk;
+				SYMROOT = /Users/colormotor/develop/autograff/strokestyles_workspace/strokestyles_interactive_demos/strokestyles_testbed/xcode/build;
+			};
+			name = Debug;
+		};
+		BFC4E4D11CB8497AB5FE6D45 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/colormotor/develop/autograff/strokestyles_workspace/strokestyles_interactive_demos/strokestyles_testbed/bin;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					GL_SILENCE_DEPRECATION,
+					INCLUDE_PROTOTYPES,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/Users/colormotor/develop/autograff/strokestyles_workspace/strokestyles_interactive_demos/strokestyles_testbed/src/strokestyles_prototypes,
+					/Users/colormotor/develop/autograff/strokestyles_workspace/strokestyles_interactive_demos/strokestyles_testbed/include,
+					/Users/colormotor/develop/autograff/strokestyles_workspace/strokestyles_interactive_demos/strokestyles_testbed/src,
+					/Users/colormotor/develop/autograff/strokestyles_workspace/strokestyles_interactive_demos/strokestyles_testbed/src/colormotor,
+					/Users/colormotor/develop/autograff/strokestyles_workspace/strokestyles_interactive_demos/strokestyles_testbed/src/colormotor/deps,
+					/Users/colormotor/develop/autograff/strokestyles_workspace/strokestyles_interactive_demos/strokestyles_testbed/src/colormotor/app,
+					/Users/colormotor/develop/autograff/strokestyles_workspace/strokestyles_interactive_demos/strokestyles_testbed/src/colormotor/addons/app,
+					/Users/colormotor/opt/miniconda3/include,
+					/Users/colormotor/opt/miniconda3/include/opencv4,
+					/Users/colormotor/develop/autograff/strokestyles_workspace/strokestyles_interactive_demos/strokestyles_testbed/../../cautograff/src,
+					/Users/colormotor/develop/autograff/strokestyles_workspace/strokestyles_interactive_demos/strokestyles_testbed/../../cautograff/src/geom,
+					/Users/colormotor/develop/autograff/strokestyles_workspace/strokestyles_interactive_demos/strokestyles_testbed/../../cautograff/src/graffiti,
+					/Users/colormotor/develop/autograff/strokestyles_workspace/strokestyles_interactive_demos/strokestyles_testbed/../../cautograff/src/deps/ftgrays,
+					/Users/colormotor/develop/autograff/strokestyles_workspace/strokestyles_interactive_demos/strokestyles_testbed/../../cautograff/src/deps/tinyspline,
+					/Users/colormotor/develop/autograff/strokestyles_workspace/strokestyles_interactive_demos/strokestyles_testbed/../../cautograff/src/deps/arma_ext,
+					/Users/colormotor/develop/autograff/strokestyles_workspace/strokestyles_interactive_demos/strokestyles_testbed/src/colormotor/app/glfw3/include,
+				);
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = "/Users/colormotor/opt/miniconda3/lib /Users/colormotor/develop/autograff/strokestyles_workspace/strokestyles_interactive_demos/strokestyles_testbed/src/colormotor/app/glfw3/lib/osx";
+				LIBRARY_SEARCH_PATHS = (
+					"/Users/colormotor/opt/miniconda3/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/Users/colormotor/opt/miniconda3/lib,
+					"/Users/colormotor/develop/autograff/strokestyles_workspace/strokestyles_interactive_demos/strokestyles_testbed/src/colormotor/app/glfw3/lib/osx/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/Users/colormotor/develop/autograff/strokestyles_workspace/strokestyles_interactive_demos/strokestyles_testbed/src/colormotor/app/glfw3/lib/osx,
+					"$(inherited)",
+				);
+				OTHER_CFLAGS = (
+					"-DNDEBUG",
+					"-g",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-std=c++11",
+					"-Wno-absolute-value",
+					"-Wno-format",
+					"-Wno-switch",
+					"-Wno-macro-redefined",
+					"-Wno-deprecated-declarations",
+					"-Wno-dynamic-class-memaccess",
+					"-Wno-extra-qualification",
+					"-Wno-ignored-attributes",
+					"-Wno-dangling-else",
+					"-DNDEBUG",
+					"-g",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"-lopencv_core",
+					"-lopencv_imgproc",
+					"-lopencv_highgui",
+					"-lopencv_imgcodecs",
+					"-lopencv_videoio",
+					"-larmadillo",
+					"-lblas",
+					"-lboost_system",
+					"-lboost_filesystem",
+					"-lzmq",
+					"-framework",
+					CoreFoundation,
+					"-framework",
+					OpenGL,
+					"-framework",
+					Cocoa,
+					"-framework",
+					AppKit,
+					"-framework",
+					CoreVideo,
+					"-framework",
+					QTKit,
+					"-framework",
+					IOKit,
+					"-framework",
+					AGL,
+					"-framework",
+					GLUT,
+					"-framework",
+					Accelerate,
+					"-lglfw3",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = strokestyles_testbed;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/colormotor/develop/autograff/strokestyles_workspace/strokestyles_interactive_demos/strokestyles_testbed/xcode;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Release;
+		};
+		C3C251E89B8140229979160A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/colormotor/develop/autograff/strokestyles_workspace/strokestyles_interactive_demos/strokestyles_testbed/bin;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					GL_SILENCE_DEPRECATION,
+					INCLUDE_PROTOTYPES,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/Users/colormotor/develop/autograff/strokestyles_workspace/strokestyles_interactive_demos/strokestyles_testbed/src/strokestyles_prototypes,
+					/Users/colormotor/develop/autograff/strokestyles_workspace/strokestyles_interactive_demos/strokestyles_testbed/include,
+					/Users/colormotor/develop/autograff/strokestyles_workspace/strokestyles_interactive_demos/strokestyles_testbed/src,
+					/Users/colormotor/develop/autograff/strokestyles_workspace/strokestyles_interactive_demos/strokestyles_testbed/src/colormotor,
+					/Users/colormotor/develop/autograff/strokestyles_workspace/strokestyles_interactive_demos/strokestyles_testbed/src/colormotor/deps,
+					/Users/colormotor/develop/autograff/strokestyles_workspace/strokestyles_interactive_demos/strokestyles_testbed/src/colormotor/app,
+					/Users/colormotor/develop/autograff/strokestyles_workspace/strokestyles_interactive_demos/strokestyles_testbed/src/colormotor/addons/app,
+					/Users/colormotor/opt/miniconda3/include,
+					/Users/colormotor/opt/miniconda3/include/opencv4,
+					/Users/colormotor/develop/autograff/strokestyles_workspace/strokestyles_interactive_demos/strokestyles_testbed/../../cautograff/src,
+					/Users/colormotor/develop/autograff/strokestyles_workspace/strokestyles_interactive_demos/strokestyles_testbed/../../cautograff/src/geom,
+					/Users/colormotor/develop/autograff/strokestyles_workspace/strokestyles_interactive_demos/strokestyles_testbed/../../cautograff/src/graffiti,
+					/Users/colormotor/develop/autograff/strokestyles_workspace/strokestyles_interactive_demos/strokestyles_testbed/../../cautograff/src/deps/ftgrays,
+					/Users/colormotor/develop/autograff/strokestyles_workspace/strokestyles_interactive_demos/strokestyles_testbed/../../cautograff/src/deps/tinyspline,
+					/Users/colormotor/develop/autograff/strokestyles_workspace/strokestyles_interactive_demos/strokestyles_testbed/../../cautograff/src/deps/arma_ext,
+					/Users/colormotor/develop/autograff/strokestyles_workspace/strokestyles_interactive_demos/strokestyles_testbed/src/colormotor/app/glfw3/include,
+				);
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = "/Users/colormotor/opt/miniconda3/lib /Users/colormotor/develop/autograff/strokestyles_workspace/strokestyles_interactive_demos/strokestyles_testbed/src/colormotor/app/glfw3/lib/osx";
+				LIBRARY_SEARCH_PATHS = (
+					"/Users/colormotor/opt/miniconda3/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/Users/colormotor/opt/miniconda3/lib,
+					"/Users/colormotor/develop/autograff/strokestyles_workspace/strokestyles_interactive_demos/strokestyles_testbed/src/colormotor/app/glfw3/lib/osx/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/Users/colormotor/develop/autograff/strokestyles_workspace/strokestyles_interactive_demos/strokestyles_testbed/src/colormotor/app/glfw3/lib/osx,
+					"$(inherited)",
+				);
+				OTHER_CFLAGS = "     -g";
+				OTHER_CPLUSPLUSFLAGS = (
+					"-std=c++11",
+					"-Wno-absolute-value",
+					"-Wno-format",
+					"-Wno-switch",
+					"-Wno-macro-redefined",
+					"-Wno-deprecated-declarations",
+					"-Wno-dynamic-class-memaccess",
+					"-Wno-extra-qualification",
+					"-Wno-ignored-attributes",
+					"-Wno-dangling-else",
+					"-g",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"-lopencv_core",
+					"-lopencv_imgproc",
+					"-lopencv_highgui",
+					"-lopencv_imgcodecs",
+					"-lopencv_videoio",
+					"-larmadillo",
+					"-lblas",
+					"-lboost_system",
+					"-lboost_filesystem",
+					"-lzmq",
+					"-framework",
+					CoreFoundation,
+					"-framework",
+					OpenGL,
+					"-framework",
+					Cocoa,
+					"-framework",
+					AppKit,
+					"-framework",
+					CoreVideo,
+					"-framework",
+					QTKit,
+					"-framework",
+					IOKit,
+					"-framework",
+					AGL,
+					"-framework",
+					GLUT,
+					"-framework",
+					Accelerate,
+					"-lglfw3",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = strokestyles_testbed;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/colormotor/develop/autograff/strokestyles_workspace/strokestyles_interactive_demos/strokestyles_testbed/xcode;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Debug;
+		};
+		E1E5C89B100946F199BE5C15 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/colormotor/develop/autograff/strokestyles_workspace/strokestyles_interactive_demos/strokestyles_testbed/xcode;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Debug;
+		};
+		ED0E56424AA74ECFAEDD9DE1 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk;
+				SYMROOT = /Users/colormotor/develop/autograff/strokestyles_workspace/strokestyles_interactive_demos/strokestyles_testbed/xcode/build;
+			};
+			name = MinSizeRel;
+		};
+		F0600363237C4A28A782277F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk;
+				SYMROOT = /Users/colormotor/develop/autograff/strokestyles_workspace/strokestyles_interactive_demos/strokestyles_testbed/xcode/build;
+			};
+			name = Release;
+		};
+		F0B3194B962A4AB891C28E01 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/colormotor/develop/autograff/strokestyles_workspace/strokestyles_interactive_demos/strokestyles_testbed/xcode;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = RelWithDebInfo;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		75013A035323432798BAA13A /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				790F5DEDB0294BDAA5894E8A /* Debug */,
+				72180A14EA87401FA4E50DC8 /* Release */,
+				32922D6836B24559B155EAB3 /* MinSizeRel */,
+				F0B3194B962A4AB891C28E01 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		7D1A2F6833A342C9A502752D /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1E5C89B100946F199BE5C15 /* Debug */,
+				49B47C7DD1F846C2BF84D0DA /* Release */,
+				1B1C90580692458DB4F3E733 /* MinSizeRel */,
+				02020ADEEA504E83BA767C62 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		DDCF7F8FD2EC4AB5AEF3028C /* Build configuration list for PBXProject "strokestyles_testbed" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				89F8C4FF04F04D30B831CBDC /* Debug */,
+				F0600363237C4A28A782277F /* Release */,
+				ED0E56424AA74ECFAEDD9DE1 /* MinSizeRel */,
+				739D4EA10AAF4055B149F0A9 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		E20C7BFF0D3A4BF19E50B11E /* Build configuration list for PBXNativeTarget "strokestyles_testbed" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3C251E89B8140229979160A /* Debug */,
+				BFC4E4D11CB8497AB5FE6D45 /* Release */,
+				641C90CB3388462FB6CA59AE /* MinSizeRel */,
+				15DC0A024C7448BB8A881C5A /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 15D4A92BDC974B6B80785564 /* Project object */;
+}
