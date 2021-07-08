@@ -64,7 +64,7 @@
             {"Stylization.Advanced.max displacement": "Max displacement"},
             {"Stylization.opt x0":"Optimise initial state"},
             {"Stylization.Advanced.subdivision" : "subdivision"},
-            {"Stylization.Advanced.subdivision" : "subsampling"}
+            {"Stylization.Advanced.subsampling" : "subsampling"}
         ]}
     ]},
     {"_Layering":

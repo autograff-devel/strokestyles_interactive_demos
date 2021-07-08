@@ -14,11 +14,11 @@
 #endif
 
 #ifdef USE_SYPHON
-#include "syphon_wrapper.h"
+#include "syphon_wrapper/syphon_wrapper.h"
 
-static bool syphon_active = false;
+static bool           syphon_active = false;
 static syphon::Server syphon_server;
-static Texture* syphon_texture;
+static Texture*       syphon_texture;
 #endif
 
 GlyphDatabase FontStylizationBase::db;
@@ -243,9 +243,9 @@ int appInit(void* userData, int argc, char** argv) {
 
   similarity_preload_hack();
 
-  #ifdef USE_SYPHON
+#ifdef USE_SYPHON
   syphon_texture = new Texture(fbWidth(), fbHeight(), Texture::A8R8G8B8);
-  #endif
+#endif
   return 1;
 }
 
@@ -330,9 +330,9 @@ void appGui() {
     }
     ///
     if (ImGui::BeginTabItem("Video recording")) {
-      #ifdef USE_SYPHON
+#ifdef USE_SYPHON
       ImGui::Checkbox("Syphon active", &syphon_active);
-      #endif
+#endif
 
       ImGui::InputInt("max video frames", &max_video_frames);
 
@@ -407,21 +407,22 @@ void appRender(float w, float h) {
   }
 
   modules[curModule]->render();
-  //CM_GLERROR;
-  #ifdef USE_SYPHON
-  if (syphon_active)
-  {
-      if (fbWidth() != syphon_texture->getWidth() || fbHeight() != syphon_texture->getHeight())
-      {
-          delete syphon_texture;
-          syphon_texture = new Texture(fbWidth(), fbHeight(), Texture::A8R8G8B8);
-      }
-      syphon_texture->grabFrameBuffer();
-      syphon_server.publish(syphon_texture->getId(),
-      GL_TEXTURE_2D, syphon_texture->getWidth(), syphon_texture->getHeight(), false);
+//CM_GLERROR;
+#ifdef USE_SYPHON
+  if (syphon_active) {
+    if (fbWidth() != syphon_texture->getWidth() || fbHeight() != syphon_texture->getHeight()) {
+      delete syphon_texture;
+      syphon_texture = new Texture(fbWidth(), fbHeight(), Texture::A8R8G8B8);
+    }
+    syphon_texture->grabFrameBuffer();
+    syphon_server.publish(syphon_texture->getId(),
+                          GL_TEXTURE_2D,
+                          syphon_texture->getWidth(),
+                          syphon_texture->getHeight(),
+                          false);
   }
-  #endif
-  
+#endif
+
   gfx::saveScreenFrame();
 
   if (save_eps) {
@@ -440,10 +441,10 @@ void appExit() {
   modules.clear();
   lines::release();
 
-  #ifdef USE_SYPHON
+#ifdef USE_SYPHON
   syphon_server.release();
   delete syphon_texture;
-  #endif
+#endif
 }
 
 }  // namespace cm

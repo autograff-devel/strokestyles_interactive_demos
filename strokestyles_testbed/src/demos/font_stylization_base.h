@@ -101,7 +101,7 @@ class FontStylizationBase : public Demo {
   Trigger<bool> trig_save_png;
 
   GlyphStringParams string_params;
-  PolylineList original_shape;
+  PolylineList      original_shape;
 
   std::vector<StylizedGlyph> glyphs;
   std::vector<GlyphInstance> str;
@@ -111,7 +111,7 @@ class FontStylizationBase : public Demo {
   double                     view_scale = 1;  // Scale factor for viewing transform
 
   bool is_stroke_based = true;  // <- If false functionalities such as schematization
-                         // are not required
+                                // are not required
   bool shift_original = true;
 
   virtual void mode_gui() = 0;
@@ -221,7 +221,7 @@ class FontStylizationBase : public Demo {
 		param_modified << gui_params.addFloat("angle speed", &params.angle_speed, 0., 1.);
 
 		gui_params.newChild("Structural modifiers");
-		param_modified << gui_params.addFloat("free end extension", &string_params.free_end_extension, -2, 4.0)
+		param_modified << gui_params.addFloat("free end extension", &string_params.free_end_extension, -2, 24.0)
 			->describe("Extension for terminals");
 		param_modified << gui_params.addFloat("extension x", &string_params.extension_x, 0.0, 1.0)
 			->describe("x axis extension amount");
@@ -622,9 +622,9 @@ class FontStylizationBase : public Demo {
 
     std::string name = db.font_names[params.font_index];
 
-    if (this->is_stroke_based) { 
+    if (this->is_stroke_based) {
       //
-      
+
       if (editor.strokes.size())
         editor.generate_chunks(skel_params, render_data);
       editor.update_widths();
@@ -643,10 +643,8 @@ class FontStylizationBase : public Demo {
                                               params.text,
                                               string_params,
                                               simplify_param_modified);
-      
     }
 
-    
     // Generate string and fit to window
     double ah = appHeight();
     if (params.draw_original && shift_original) ah = ah * 0.5;
@@ -734,7 +732,7 @@ class FontStylizationBase : public Demo {
 
     gfx::pushMatrix(om);
 
-    original_shape     = instance_string_shape(str);
+    original_shape = instance_string_shape(str);
     //PolylineList skeletons = instance_string_skeletons(str);
 
     if (params.draw_original) {

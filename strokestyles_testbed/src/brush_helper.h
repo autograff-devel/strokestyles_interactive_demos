@@ -33,6 +33,7 @@ class BrushHelper {
     float brush_lowpass     = 1.;
     float brush_base_speed  = 0.0;
     bool  variable_width    = false;
+    float min_width         = 0.0;
     float randomness        = 0.;
 
     bool        drip_active       = false;
@@ -136,7 +137,7 @@ class BrushHelper {
 
     mat Pw = ctr_.mat();
     if (W.n_elem == ctr_.size() && use_width)
-      Pw = join_vert(Pw, W.t()*r);
+      Pw = join_vert(Pw, W.t() * r);
     else
       Pw = join_vert(Pw, ones(Pw.n_cols).t() * r);
 

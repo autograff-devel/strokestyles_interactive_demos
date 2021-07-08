@@ -153,6 +153,7 @@ class FontStylizationStroke : public FontStylizationBase {
         gui_params.addFloat("Lowpass", &brush.params.brush_lowpass, 0.01, 1.)->describe("Brush speed low pass");
         gui_params.addFloat("Base speed", &brush.params.brush_base_speed, 0.0, 1)->describe("Brush base (relative) speed");
         gui_params.addBool("Vary width", &brush.params.variable_width)->describe("Use segmemntation width for brush");
+				param_modified << gui_params.addFloat("Min width", &brush.params.min_width, 0., 10.)->describe("Minimum brush width");
 
         child = gui_params.newChild("Drips");
         gui_params.addBool("drips active", &brush.params.drip_active);
@@ -558,7 +559,7 @@ class FontStylizationStroke : public FontStylizationBase {
     if (Keyboard::pressed(ImGuiKey_Enter)) screen_recording.time = 0;
 
     if (needs_update)
-      screen_recording.time            = 10000000.;
+      screen_recording.time = 10000000.;
 
     if (screen_recording.active) {
       screen_recording.time += 1. / (30 * screen_recording.stroke_duration);
@@ -619,7 +620,7 @@ class FontStylizationStroke : public FontStylizationBase {
               // hack rectify smoothness
               vec    W     = Pw.row(2).t();
               double ratio = info.strokes[j].max_w / W.max();
-              W            = W * ratio;  //(info.strokes[j].Wv.max() / W.max());
+              W            = brush.params.min_width * 10 + W * ratio;  //(info.strokes[j].Wv.max() / W.max());
               // vertex_widths.push_back(W);//Pw.row(2).t());
               vertex_widths.push_back(
                   W % (ones(W.n_elem) + random::uniform(-1., 1., W.n_elem) *
