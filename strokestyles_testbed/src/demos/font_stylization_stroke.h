@@ -683,15 +683,15 @@ class FontStylizationStroke : public FontStylizationBase {
         break;
       case MODE_TRACE:
         gfx::color(brush.params.color);
-        for (int i = 0; i < bezier_samples.size(); i++) {
-          // std::cout << "Stroke width: " << stroke_widths[i] << std::endl;
-          brush.draw_brush_uniform(
-              white_circle_im,
-              bezier_samples[i],
-              10000,
-              stroke_widths[i] * bezier_params.width_multiplier,
-              zeros(0));
-        }
+        // for (int i = 0; i < bezier_samples.size(); i++) {
+        //   // std::cout << "Stroke width: " << stroke_widths[i] << std::endl;
+        //   brush.draw_brush_uniform(
+        //       white_circle_im,
+        //       bezier_samples[i],
+        //       10000,
+        //       stroke_widths[i] * bezier_params.width_multiplier,
+        //       zeros(0));
+        // }
 
         // if (brush.params
         //         .split_polylines)  // && render_data.softie_params.smoothness
@@ -832,6 +832,12 @@ class FontStylizationStroke : public FontStylizationBase {
         }
         break;
       }
+    }
+
+    if (mode_params.mode == MODE_TRACE && !bezier_samples.size()) {
+      gfx::color(0);
+      for (int i = 0; i < handwritten_strokes.size(); i++)
+        gfx::draw(handwritten_strokes[i]);
     }
 
     if (save_svg_path != "") {
