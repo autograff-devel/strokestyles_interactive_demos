@@ -74,6 +74,7 @@ include_directories(include
       ${PROJECT_SOURCE_DIR}/src/colormotor/deps
       ${PROJECT_SOURCE_DIR}/src/colormotor/app
 	  ${PROJECT_SOURCE_DIR}/src/colormotor/addons/app
+      /usr/local/include
 )
 
 # #${PROJECT_SOURCE_DIR}/../../../lib/
@@ -98,6 +99,7 @@ set(ARMADILLO_LIBRARIES
 link_directories(
   ${BASE_SEARCH_DIR}/lib
   ${PROJECT_SOURCE_DIR}/src/colormotor/app/glfw3/lib/osx
+  /usr/local/lib
 )
 
 # add_definitions("-F${PROJECT_SOURCE_DIR}/src/deps/syphon_wrapper")
