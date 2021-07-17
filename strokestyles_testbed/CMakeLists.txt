@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.0.0)
 project(strokestyles_testbed VERSION 0.1.0)
 
 set( CMAKE_VERBOSE_MAKEFILE on )
+set(CMAKE_CXX_STANDARD 14)
 
 if(1) #APPLE)
   set(CMAKE_C_COMPILER "/usr/bin/clang")
@@ -52,6 +53,7 @@ endforeach()
 message("Base path is " ${BASE_SEARCH_DIR})
 
 find_package(OpenGL REQUIRED)
+find_package(CGAL REQUIRED)
 
 add_definitions(-g)
 add_definitions(-DGL_SILENCE_DEPRECATION)
@@ -233,6 +235,9 @@ target_link_libraries(strokestyles_testbed
     blas
     boost_system
     boost_filesystem
+    boost_thread
+    mpfr
+    gmp
     )
 
 if(EXISTS ${PROTOTYPE_DIR}) #"${PROJECT_SOURCE_DIR}/src/strokestyles_prototypes")
