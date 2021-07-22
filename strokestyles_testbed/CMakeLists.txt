@@ -53,7 +53,7 @@ endforeach()
 message("Base path is " ${BASE_SEARCH_DIR})
 
 find_package(OpenGL REQUIRED)
-find_package(CGAL REQUIRED)
+# find_package(CGAL REQUIRED)
 
 add_definitions(-g)
 add_definitions(-DGL_SILENCE_DEPRECATION)
@@ -267,9 +267,9 @@ if(APPLE)
         "-framework AGL"
         "-framework GLUT"
         "-framework Accelerate"
-        #"-framework Syphon"
         #${PROJECT_SOURCE_DIR}/src/deps/syphon_wrapper/Syphon.framework
         glfw3
+        glfw
         )
 elseif(UNIX)
     message("Platform: Linux")
