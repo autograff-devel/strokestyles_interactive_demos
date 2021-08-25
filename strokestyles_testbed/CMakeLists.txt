@@ -236,8 +236,6 @@ target_link_libraries(strokestyles_testbed
     boost_system
     boost_filesystem
     boost_thread
-    mpfr
-    gmp
     )
 
 if(EXISTS ${PROTOTYPE_DIR}) #"${PROJECT_SOURCE_DIR}/src/strokestyles_prototypes")
