@@ -227,7 +227,7 @@ class FontStylizationBase : public Demo {
 			->describe("x axis extension amount");
 		param_modified << gui_params.addFloat("extension y", &string_params.extension_y, 0.0, 1.0)
 			->describe("y axis extension amount");
-
+		param_modified << gui_params.addFloat("random_deviation", &string_params.random_deviation, 0., 100.0);
 		param_modified << gui_params.addFloat("wiggle_length_thresh", &string_params.length_thresh, 0., 100.0);
 		param_modified << gui_params.addFloat("horizontal_wiggle_thresh", &string_params.horizontal_wiggle_thresh, -2.0, 2.0);
 		param_modified << gui_params.addFloat("vertical_wiggle_thresh", &string_params.vertical_wiggle_thresh, -2.0, 2.0);
@@ -592,8 +592,12 @@ class FontStylizationBase : public Demo {
     glEnable(GL_LINE_SMOOTH);
     bool        save_png = false;
     std::string png_path = "";
+    std::string xml_path = "";
     if (trig_save_png.isTriggered()) {
-      if (saveFileDialog(png_path, "png")) save_png = true;
+      if (saveFileDialog(png_path, "png")) {
+        xml_path = path_without_ext(png_path) + ".xml";
+        save_png = true;
+      }
     }
 
     if (params.frame_seed)
@@ -756,6 +760,7 @@ class FontStylizationBase : public Demo {
       glFlush();
       img.grabFrameBuffer();
       img.save(png_path);
+      gui_params.saveXml(xml_path);
     }
     // fibt
   }

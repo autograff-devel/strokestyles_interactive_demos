@@ -136,12 +136,10 @@ class FontStylizationGraffiti : public FontStylizationBase {
                                             "stepwise"};
     gui_params.addBool("render on load", &mode_params.render_on_load);
     param_modified
-        << gui_params
-               .addSelection("spine type",
-                             spine_types,
-                             &render_data.style.spine_type)
-               ->describe(
-                   "determines the kind of width variation used in the spine");
+        << gui_params.addSelection("spine type",
+                                   spine_types,
+                                   &render_data.style.spine_type)
+               ->describe("determines the kind of width variation used in the spine");
 
     param_modified
         << gui_params.addFloat("w0", &render_data.style.w0, 0., 2.)
@@ -149,13 +147,14 @@ class FontStylizationGraffiti : public FontStylizationBase {
     param_modified
         << gui_params.addFloat("w1", &render_data.style.w1, 0., 2.)
                ->describe("Max width ratio (with respect to max stroke width)");
-    param_modified << gui_params
-                          .addFloat("Chisel angle",
-                                    &render_data.style.chisel_ang,
-                                    -180,
-                                    180)
+    param_modified << gui_params.addFloat("Chisel angle",
+                                          &render_data.style.chisel_ang,
+                                          -180,
+                                          180)
                           ->describe("Orientation of chiseled tip");
-
+    param_modified
+        << gui_params.addFloat("min w", &render_data.style.min_width, 0., 100.)
+               ->describe("Minimum spine width (global)");
     // param_modified << gui_params.addFloat("min thickness",
     // &render_data.min_width, 0., 100.)->describe("minimum thickness (in
     // original letter units)");//->noGui();
@@ -673,16 +672,15 @@ class FontStylizationGraffiti : public FontStylizationBase {
 
   void do_fancy_stuff_save() {
     PolylineList whole_shape = shape_offset(
-    shape_offset(layering.whole, tracing_params.min_outline_size / 2),
-    -tracing_params.min_outline_size / 2);
+        shape_offset(layering.whole, tracing_params.min_outline_size / 2),
+        -tracing_params.min_outline_size / 2);
     if (extrusion_params.thicken > 0.)
       whole_shape = shape_offset(whole_shape, extrusion_params.thicken, ag::JOIN_ROUND);
-        
+
     gfx::color(outline_params.color);
     gfx::fill(whole_shape);  //was fill whole_shape);
-    
+
     if (extrusion_params.active) {
-      
       for (const Polyline& P : reversed(extrusion)) {
         vec clr = ag::Color::mul_saturation(extrusion_params.color,
                                             extrusion_params.saturation);
@@ -694,22 +692,22 @@ class FontStylizationGraffiti : public FontStylizationBase {
         gfx::draw(P);
       }
     }
-    
+
     vec clr = (vec)fill_params.color;
     gfx::color(clr);
     gfx::fill(layering.whole);
-    
+
     // outline
     gfx::color(outline_params.color);
     set_line_width(outline_params.thickness);
     for (int i = 0; i < layering.visible_outlines.size(); i++) {
       gfx::draw(layering.visible_outlines[i]);
     }
-    
+
     gfx::draw(layering.whole);
     //gfx::lineWidth(1.);
   }
-  
+
   void do_fancy_stuff() {
     if (!layering.whole.size()) return;
 
