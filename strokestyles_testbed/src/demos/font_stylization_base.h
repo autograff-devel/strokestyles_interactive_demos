@@ -194,6 +194,8 @@ class FontStylizationBase : public Demo {
     //param_modified << gui_params.addFloat("ty", &params.ty, -600, 600);
     param_modified << gui_params.addFloat("spacing", &string_params.spacing, 0.1, 2.)
 			->describe("Spacing between letters");
+    param_modified << gui_params.addFloat("y alternating offset", &string_params.vertical_alternating_offset, -1., 1.)
+			->describe("Alternating vertical offset between letters");
     // param_modified << gui_params.addFloat("font size", &string_params.size,
     // 100, 1000);
     //gui_params.addInt("font index", &params.font_index)->noGui();
