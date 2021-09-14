@@ -504,6 +504,9 @@ class StrokeSimilarity {
   }
 
   int get_id(int c, int stroke_ind) {
+    if (c == ' ')
+      return -1;
+
     if (index_map.find(c) == index_map.end()) return -1;
     ivec inds = index_map[c];
     if (stroke_ind >= inds.n_elem) return -1;
@@ -578,7 +581,7 @@ class FontStylizationSimilarity : public FontStylizationBase {
     std::string name = params.font_name;  // db.font_names[params.font_index];
     similarity.load(
         join_path(get_data_dir(), "stroke_distances/" + name + ".json"));
-    if (similarity.is_valid()) similarity.cluster(mode_params.cluster_thresh);
+    if (similarity.is_valid())   similarity.cluster(mode_params.cluster_thresh);
   }
 
   std::string get_data_dir() const { return parent_directory(glyph_dir); }
@@ -681,6 +684,10 @@ class FontStylizationSimilarity : public FontStylizationBase {
     std::set<int>             ids_unique;
 
     for (int i = 0; i < str.size(); i++) {
+      if (!str[i].info.valid) {
+        std::cout << "skipping space: " << i << std::endl;
+        continue;
+      }
       for (int j = 0; j < str[i].info.strokes.size(); j++) {
         int id = similarity.get_id(text[i], j);
         ids.push_back(id);
@@ -717,6 +724,9 @@ class FontStylizationSimilarity : public FontStylizationBase {
     bool clicked = Mouse::clicked(0);
 
     for (int i = 0; i < str.size(); i++) {
+      if (!str[i].info.valid)
+        continue;
+
       gfx::pushMatrix(str[i].tm);
       std::map<int, std::vector<Link>> stroke_links;  // links ending in a given stroke
       for (auto link : str[i].info.connectivity.links) {
@@ -843,6 +853,9 @@ class FontStylizationSimilarity : public FontStylizationBase {
 
     k = 0;
     for (int i = 0; i < str.size(); i++) {
+      if (!str[i].info.valid)
+        continue;
+
       gfx::pushMatrix(str[i].tm);
       for (int j = 0; j < str[i].info.strokes.size(); j++) {
         const PolylineList& stroke_shape = all_stroke_shapes[k];
