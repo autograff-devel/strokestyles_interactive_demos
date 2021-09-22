@@ -128,6 +128,112 @@ struct StrokeImage {
   PolylineList contours;
 };
 
+class StrokeSimilarity {
+ public:
+  StrokeSimilarity() { distances = zeros(0, 0); }
+
+  bool load(const std::string& path) {
+    index_map.clear();
+    groups.clear();
+
+    valid               = false;
+    std::string jsonstr = string_from_file(path);
+    if (jsonstr == "") return false;
+
+    json parsed = json::parse(jsonstr);
+    distances   = json_to_mat(parsed["distances"]);
+
+    index_map.clear();
+    json char_indices = parsed["char_indices"];
+    for (json::iterator it = char_indices.begin(); it != char_indices.end();
+         ++it) {
+      int  key       = utf8_string(std::string(it.key()))[0];
+      ivec inds      = json_to_ivec(it.value());
+      index_map[key] = inds;
+    }
+
+    valid = true;
+    return true;
+  }
+
+  bool is_valid() const { return distances.n_rows != 0; }
+
+  void cluster(double thresh) {
+    if (!valid) return;
+
+    int m = distances.n_rows;
+
+    // For each user defined group, set maximum distance (1)
+    // for all other strokes that are not in the group
+    auto distances_user = distances;
+
+    std::map<int, std::vector<int>> user_group_inds;  // from group id to 0 if not in group or 1 if in group
+    for (auto it = user_groups.begin(); it != user_groups.end(); ++it) {
+      if (it->second > 0) {
+        if (!ag::in(it->second, user_group_inds)) {
+          user_group_inds[it->second] = std::vector<int>(m, 0);
+        }
+        user_group_inds[it->second][it->first] = 1;
+      }
+    }
+
+    for (auto it = user_group_inds.begin(); it != user_group_inds.end(); ++it) {
+      for (int i = 0; i < m; i++) {
+        if (it->second[i]) {
+          for (int j = 0; j < m; j++) {
+            if (!it->second[j]) {
+              distances_user(i, j) = 1;
+              distances_user(j, i) = 1;
+            }
+          }
+        }
+      }
+    }
+
+    // Compute distance vector for clustering
+    vec   Y(m * (m - 1) / 2);
+    uword k = 0;
+    for (int i = 0; i < m; i++)
+      for (int j = i + 1; j < m; j++) Y(k++) = distances_user(i, j);
+
+    std::cout << "Computing clustering for thresh " << thresh << std::endl;
+    mat  Z        = linkage(Y);
+    uvec clusters = arma_ext::cluster(Z, thresh);
+    std::cout << "Done" << std::endl;
+    this->groups.clear();
+    for (int i = 0; i < clusters.n_elem; i++) {
+      groups.push_back(clusters(i));
+    }
+  }
+
+  int get_id(int c, int stroke_ind) {
+    if (c == ' ')
+      return -1;
+
+    if (index_map.find(c) == index_map.end()) return -1;
+    ivec inds = index_map[c];
+    if (stroke_ind >= inds.n_elem) return -1;
+    return groups[inds[stroke_ind]];
+  }
+
+  int get_index(int c, int stroke_ind) {
+    if (c == ' ')
+      return -1;
+
+    if (index_map.find(c) == index_map.end()) return -1;
+    ivec inds = index_map[c];
+    if (stroke_ind >= inds.n_elem) return -1;
+    return inds[stroke_ind];
+  }
+
+  std::map<int, int>  user_groups;
+  std::map<int, ivec> index_map;
+  std::vector<int>    groups;
+  arma::mat           distances;
+
+  bool valid = false;
+};
+
 class ImageSelectorHelper {
  public:
   std::map<std::string, std::string>  paths;
@@ -255,7 +361,6 @@ class ImageSelectorHelper {
   void gui() {
     save_selection = false;
 
-    ImGui::Begin("Replacement UI");
     bool reset_image_dir = false;
     if (ImGui::Button("Set Image Directory...")) {
       if (openFolderDialog(path, "Select Directory")) {
@@ -292,7 +397,7 @@ class ImageSelectorHelper {
     if (none_selected() && !just_loaded) {
       ImGui::Text("To replace a stroke with an image:");
       ImGui::Text("click on a stroke of the font, and then select an image");
-      ImGui::End();
+      //ImGui::End();
       return;
     }
 
@@ -381,7 +486,7 @@ class ImageSelectorHelper {
       }
     }
 
-    ImGui::End();
+    //ImGui::End();
   }
 
   StrokeReplacement* get_replacement(int c, int stroke_ind) {
@@ -453,72 +558,6 @@ class ImageSelectorHelper {
   std::string                                                 save_path;
 };
 
-class StrokeSimilarity {
- public:
-  StrokeSimilarity() { distances = zeros(0, 0); }
-
-  bool load(const std::string& path) {
-    index_map.clear();
-    groups.clear();
-
-    valid               = false;
-    std::string jsonstr = string_from_file(path);
-    if (jsonstr == "") return false;
-
-    json parsed = json::parse(jsonstr);
-    distances   = json_to_mat(parsed["distances"]);
-
-    index_map.clear();
-    json char_indices = parsed["char_indices"];
-    for (json::iterator it = char_indices.begin(); it != char_indices.end();
-         ++it) {
-      int  key       = utf8_string(std::string(it.key()))[0];
-      ivec inds      = json_to_ivec(it.value());
-      index_map[key] = inds;
-    }
-
-    valid = true;
-    return true;
-  }
-
-  bool is_valid() const { return distances.n_rows != 0; }
-
-  void cluster(double thresh) {
-    if (!valid) return;
-
-    // pairwise distance vector
-    int   m = distances.n_rows;
-    vec   Y(m * (m - 1) / 2);
-    uword k = 0;
-    for (int i = 0; i < m; i++)
-      for (int j = i + 1; j < m; j++) Y(k++) = distances(i, j);
-
-    std::cout << "Computing clustering for thresh " << thresh << std::endl;
-    mat  Z        = linkage(Y);
-    uvec clusters = arma_ext::cluster(Z, thresh);
-    std::cout << "Done" << std::endl;
-    this->groups.clear();
-    for (int i = 0; i < clusters.n_elem; i++) {
-      groups.push_back(clusters(i));
-    }
-  }
-
-  int get_id(int c, int stroke_ind) {
-    if (c == ' ')
-      return -1;
-
-    if (index_map.find(c) == index_map.end()) return -1;
-    ivec inds = index_map[c];
-    if (stroke_ind >= inds.n_elem) return -1;
-    return groups[inds[stroke_ind]];
-  }
-
-  std::map<int, ivec> index_map;
-  std::vector<int>    groups;
-  arma::mat           distances;
-  bool                valid = false;
-};
-
 class FontStylizationSimilarity : public FontStylizationBase {
  public:
   int tool = 0;
@@ -576,12 +615,17 @@ class FontStylizationSimilarity : public FontStylizationBase {
     image_selector.reload();
   }
 
+  //  virtual void load_defaults()  // overrides Demo
+  //  {
+  //    gui_params.loadXml(default_configuration_path(this, "_default.xml"));
+  //  }
+
   void load_distances() {
     // if (params.font_index >= db.font_names.size()) return;
     std::string name = params.font_name;  // db.font_names[params.font_index];
     similarity.load(
         join_path(get_data_dir(), "stroke_distances/" + name + ".json"));
-    if (similarity.is_valid())   similarity.cluster(mode_params.cluster_thresh);
+    if (similarity.is_valid()) similarity.cluster(mode_params.cluster_thresh);
   }
 
   std::string get_data_dir() const { return parent_directory(glyph_dir); }
@@ -590,9 +634,21 @@ class FontStylizationSimilarity : public FontStylizationBase {
     return path_without_ext(xml_path) + ".json";
   }
 
+  std::string get_json_group_path(const std::string& xml_path) {
+    return path_without_ext(xml_path) + "_user_groups.json";
+  }
+
   virtual bool save_params_request(const std::string& path) {
     gui_params.saveXml(path);
     image_selector.save_json(get_json_preset_path(path));
+    std::map<std::string, int> user_groups;
+    for (auto it : similarity.user_groups) {
+      user_groups[int_to_string(it.first)] = it.second;
+    }
+    json js;
+    js["user_groups"]   = user_groups;
+    std::string jsonstr = js.dump();
+    ag::string_to_file(jsonstr, get_json_group_path((path)));
     return true;
   }
 
@@ -603,6 +659,18 @@ class FontStylizationSimilarity : public FontStylizationBase {
     image_selector.reload();
     image_selector.load_json(get_json_preset_path(path));
     load_distances();
+    if (file_exists(get_json_group_path(path))) {
+      std::string jsonstr = string_from_file(get_json_group_path(path));
+      if (jsonstr.length()) {
+        json parsed = json::parse(jsonstr);
+        similarity.user_groups.clear();
+        json                       js          = parsed["user_groups"];
+        std::map<std::string, int> user_groups = js;
+        for (auto it : user_groups) {
+          similarity.user_groups[std::stoi(it.first)] = it.second;
+        }
+      }
+    }
   }
 
   void load_preset(const std::string& path)  //
@@ -629,8 +697,30 @@ class FontStylizationSimilarity : public FontStylizationBase {
     }
     if (ImGui::Button("Reset anim")) image_selector.reset_anim();
 
+    ImGui::Begin("Replacement UI");
     image_selector.gui();  // selected_image);
-                           //
+    int ind = similarity.get_index(image_selector.selected.first, image_selector.selected.second);
+    if (ind > -1) {
+      int group = 0;
+      if (ag::in(ind, similarity.user_groups)) {
+        group = similarity.user_groups[ind];
+
+        if (ImGui::InputInt("User stroke group", &group)) {
+          similarity.user_groups[ind]           = group;
+          cluster_param_modified.force_modified = true;
+        }
+
+      } else {
+        if (ImGui::InputInt("User stroke group", &group)) {
+          if (group) {
+            similarity.user_groups[ind]           = group;
+            cluster_param_modified.force_modified = true;
+          }
+        }
+      }
+    }
+    ImGui::End();
+    //
   }
 
   void draw_replacement(StrokeReplacement* r, const PolylineList& shape, int flipflag) {
@@ -816,8 +906,10 @@ class FontStylizationSimilarity : public FontStylizationBase {
         //                }
 
         if (image_selector.is_selected(text[i], j)) {
+          gfx::lineWidth(3.0);
           gfx::color(0, 1, 0);
           gfx::draw(stroke_shape);
+          gfx::lineWidth(1.0);
 
           if (image_selector.save_selection) {
             Rasterizer2D rast(512, 512);

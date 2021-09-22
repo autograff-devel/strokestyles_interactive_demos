@@ -213,8 +213,7 @@ class FontStylizationBase : public Demo {
 		// schematization");
 		param_modified << gui_params.addFloat("start angle", &string_params.start_ang, 0, 360)
 			->describe("Initial angle for schematization");
-		// param_modified << gui_params.addFloat("interpolation lowpass",
-		// &string_params.interpolation_lowpass, 0., 1.0);
+		param_modified << gui_params.addFloat("interpolation lowpass", &string_params.interpolation_lowpass, 0., 1.0);
 		param_modified << gui_params.addBool("also opposite angle", &string_params.schematize_also_opposite_angle);
 		param_modified << gui_params.addBool("adjust struct", &string_params.adjust_struct);
 		param_modified << gui_params.addBool("rectify struct", &string_params.rectify);
@@ -377,7 +376,7 @@ class FontStylizationBase : public Demo {
     // db.load(glyph_dir);  // lod_directories[current_lod]);
   }
 
-  void load_defaults()  // overrides Demo
+  virtual void load_defaults()  // overrides Demo
   {
     load_paramters_keep_state(default_configuration_path(this, "_default.xml"));
   }
@@ -716,6 +715,7 @@ class FontStylizationBase : public Demo {
     //   gfx::popMatrix();
     // }
     // av_w /= str.size();
+
 
     StrokeRenderData render_data_for_mode = render_data;
 
